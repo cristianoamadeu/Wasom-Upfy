@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wason Upfy</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/libs/scrollue.css">
+    <link rel="shortcut icon" href="../imgs/logo.jpg" type="image/x-icon">
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/javascript.js"></script>
+</head>
+
+<style>
+    #preview-image {
+        width: 400px;
+        height: auto;
+        border: 1px solid #c71585;
+        border-radius: 20px;
+        margin-bottom: 10px;
+    }
+</style>
+
+<body style="background-color: black; color: white;">
+    <header class="fixed-top">
+        <nav class="navbar bg-body-tertiary ">
+            <div class="container-fluid">
+                <div>
+                    <a class="navbar-brand" href="painel.html"><img src="../imgs/logo.jpg" class="logo"
+                            alt="Wason Upfy"></a>
+                </div>
+
+                <div class="container_link1">
+                    <a class="link_navbar" href="painel.html">Painel de Controlo</a>
+                    <a class="link_navbar" href="#"
+                        style=" color: #c71585; border-bottom: 1px solid #c71585;  padding: 0 5px;">Minhas músicas</a>
+                    <a class="link_navbar" href="financa.html">Finanças</a>
+                    <a class="link_navbar" href="estatistic.html">Estatísticas</a>
+                    <a class="link_navbar" href="planos.html">Nossos Planos</a>
+                    <a class="link_navbar" href="configuration.html">Configurações</a>
+
+                </div>
+                <button class="navbar-toggler btn_menu" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-menu" style="color: #c71585;">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel" style="background-color: black; color: #c71585;">
+                    <div class="offcanvas-header" style="padding: 20px 30px 0 30px;">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Wason Upfy</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
+                            style=" background-color: #c71585;">
+                        </button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" style="row-gap: 10px;">
+                            <a class="link_navbar" href="painel.html">Painel de Controlo</a>
+                            <a class="link_navbar" href="#"
+                                style=" color: #c71585; border-bottom: 1px solid #c71585;  padding: 0 5px;">Minhas
+                                músicas</a>
+                            <a class="link_navbar" href="financa.html">Finanças</a>
+                            <a class="link_navbar" href="estatistic.html">Estatísticas</a>
+                            <a class="link_navbar" href="planos.html">Nossos Planos</a>
+                            <a class="link_navbar" href="configuration.html">Configurações</a>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!---------------INICIO DO BACKEND---------------->
+
+    <main class="main_blog" style="margin-top: 100px; width: 100%;">
+        <!---------------INICIO DO ALBUM DO USUÁRIO---------------->
+
+        <div class="album" id="albuns" style=" width: 100%;">
+            <header class="album-header" style="margin-bottom: 6px; display: flex; align-items: center;"
+                id="headerAlbum">
+                <div class="header_body">
+                    <div>
+                        <h4>Pedido para eliminar álbum</h4>
+                    </div>
+                </div>
+                <div style="margin-top: 10px;">
+                    <a href="musics-faixas.html" class="btn"
+                        style="background-color: #c71585; color: white; margin-bottom: 10px;">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-arrow-left">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
+                        Voltar para a(s)
+                        faixa(s)</a>
+                </div>
+            </header>
+
+            <main class="album">
+                <!---------------INICIO DO ALBUM (LOOP)---------------->
+                <div class="album-container2"
+                    style="backdrop-filter: blur(30px); box-shadow: 0 0 20px #540037; margin-bottom: 10px; padding: 15px;">
+
+                    <div class="card mb-3 card_planos4" style="background-color: black;">
+                        <div class="row">
+
+                            <!-- coluna da imagem -->
+                            <div class="col-4 card_top">
+                                <img src="../imgs/fundo1.jpg" class="img-fluid rounded-start">
+                            </div>
+
+                            <!-- coluna do texto -->
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h4 class="card-title">Título do Album:: xxxxxxxxxxxxxxxxxxx</h4>
+                                    <div>
+                                        <p class="card-text">
+                                        <h5 class="name_search">Título do Artista: xxxxxxxxxxxxxxxxxxx</h5>
+                                        </p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr style="width: 100%;">
+                    <span class="alert alert-danger" style="margin: 0;"><strong>Atenção:</strong> Ao apagar este album, também vás apagar
+                        todas músicas do album.</span>
+                        <hr style="width: 100%;">
+                        
+                        <div style="display: flex; justify-content: center; width: 100%;">
+
+                            <div style="width: 100%;">
+                                <form action="home.html" method="get" class="">
+
+                                    <div>
+                                        <div class="container_delete">
+                                            <h4 style="padding-top: 10px;">Seus Dados</h4>
+                                            <div>
+                                                <a href="musics-faixas.html" class="btn"
+                                                    style="background-color: #c71585; color: white;">
+
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="feather feather-arrow-left">
+                                                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                                                        <polyline points="12 19 5 12 12 5"></polyline>
+                                                    </svg>
+                                                    Voltar para a(s)
+                                                    faixa(s)</a>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="input_gruop" style="margin-bottom: 20px;">
+                                        <div class="form-floating" style="width: 100%; color: white;">
+                                            <input type="text" name="" id="" class="form-control " placeholder="name"
+                                                readonly style="background-color: black;">
+                                        </div>
+
+                                        <div class="form-floating" style="width: 100%; color: white;">
+                                            <input type="text" name="" id="" class="form-control " placeholder="name"
+                                                readonly style="background-color: black;">
+
+                                        </div>
+                                    </div>
+
+                                    <h6 class="text_inform">Imforma - nos o motivo da solicitação da eliminação deste
+                                        álbum</h6>
+                                    <div class="form-floating" style="width: 100%; color: white;">
+                                        <textarea name="" id="" rows="5" style="width: 100%; padding: 20px;" required
+                                            placeholder="Imforma - nos..."></textarea>
+                                        <!---------------INPUT - ALTERAR O NAME ---------------->
+                                    </div>
+
+                                    <button type="submit" class="btn"
+                                        style="background-color: #c71585; color: white; width: 100%; margin-bottom: 20px;">Enviar
+                                        Pedido
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-send">
+                                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                        </svg>
+                                    </button>
+
+                                </form>
+                            </div>
+                        </div>
+            </main>
+            <!---------------FIM DO ALBUM (LOOP)---------------->
+            <hr>
+    </main>
+
+
+
+    </main>
+
+    <!---------------FIM DO BACKEND---------------->
+
+
+</body>
+
+<script>
+    const checkboxPrincipal = document.getElementById('checkbox-principal');
+    const checkboxesSecundarios = document.querySelectorAll('.checkbox-secundario');
+
+    checkboxPrincipal.addEventListener('click', function () {
+        const estadoPrincipal = checkboxPrincipal.checked;
+
+        checkboxesSecundarios.forEach(checkbox => {
+            checkbox.checked = estadoPrincipal;
+        });
+    });
+</script>
+
+<script>
+    const checkboxPrincipal2 = document.getElementById('checkbox-principal2');
+    const checkboxesSecundarios2 = document.querySelectorAll('.checkbox-secundario2');
+
+    checkboxPrincipal2.addEventListener('click', function () {
+        const estadoPrincipal2 = checkboxPrincipal2.checked;
+
+        checkboxesSecundarios2.forEach(checkbox => {
+            checkbox.checked = estadoPrincipal2;
+        });
+    });
+</script>
+
+
+<script>
+    const playlist = document.getElementById('playlist');
+    const nowPlayingDiv = document.getElementById('nowPlaying');
+    const songTitleP = document.getElementById('songTitle');
+    const playButton = document.getElementById('playButton');
+    const pauseButton = document.getElementById('pauseButton');
+    const previousButton = document.getElementById('previousButton');
+    const nextButton = document.getElementById('nextButton');
+    const shuffleButton = document.getElementById('shuffleButton');
+    let currentSongIndex = 0;
+    let isShuffled = false;
+
+    function updateNowPlayingInfo() {
+        const currentSong = playlist.querySelectorAll('audio')[currentSongIndex];
+        const songTitle = currentSong.dataset.title || currentSong.src.split('/').pop().split('.')[0];
+        songTitleP.textContent = songTitle;
+    }
+
+    playButton.addEventListener('click', () => {
+        const allSongs = playlist.querySelectorAll('audio');
+        allSongs[currentSongIndex].play();
+        updateNowPlayingInfo();
+    });
+
+    pauseButton.addEventListener('click', () => {
+        const allSongs = playlist.querySelectorAll('audio');
+        for (const song of allSongs) {
+            song.pause();
+        }
+    });
+
+    previousButton.addEventListener('click', () => {
+        const allSongs = playlist.querySelectorAll('audio');
+        const previousSongIndex = (currentSongIndex - 1 + allSongs.length) % allSongs.length;
+
+        allSongs[currentSongIndex].pause();
+        allSongs[previousSongIndex].play();
+        currentSongIndex = previousSongIndex;
+        updateNowPlayingInfo();
+    });
+
+    nextButton.addEventListener('click', playNextSong);
+
+    shuffleButton.addEventListener('click', () => {
+        isShuffled = !isShuffled;
+        shuffleButton.textContent = isShuffled ? 'Desativar Aleatório' : 'Ativar Aleatório';
+    });
+
+    for (const song of playlist.querySelectorAll('audio')) {
+        song.addEventListener('playing', () => {
+            currentSongIndex = playlist.querySelectorAll('audio').indexOf(song);
+            updateNowPlayingInfo();
+        });
+
+        song.addEventListener('ended', () => {
+            playNextSong();
+        });
+    }
+
+    function playNextSong() {
+        let nextSongIndex;
+        if (isShuffled) {
+            do {
+                nextSongIndex = Math.floor(Math.random() * playlist.querySelectorAll('audio').length);
+            } while (nextSongIndex === currentSongIndex);
+        } else {
+            nextSongIndex = (currentSongIndex + 1) % playlist.querySelectorAll('audio').length;
+        }
+
+        const allSongs = playlist.querySelectorAll('audio');
+        allSongs[currentSongIndex].pause();
+        allSongs[nextSongIndex].play();
+        currentSongIndex = nextSongIndex;
+        updateNowPlayingInfo();
+    }
+</script>
+
+
+<script>
+    const playlist2 = document.getElementById('playlist2');
+    const nowPlayingDiv2 = document.getElementById('nowPlaying2');
+    const playButton2 = document.getElementById('playButton2');
+    const pauseButton2 = document.getElementById('pauseButton2');
+    const previousButton2 = document.getElementById('previousButton2');
+    const nextButton2 = document.getElementById('nextButton2');
+    const shuffleButton2 = document.getElementById('shuffleButton2');
+    let currentSongIndex2 = 0;
+    let isShuffled2 = false;
+
+
+    playButton2.addEventListener('click', () => {
+        const allSongs = playlist2.querySelectorAll('audio');
+        allSongs[currentSongIndex2].play();
+        updateNowPlayingInfo();
+    });
+
+    pauseButton2.addEventListener('click', () => {
+        const allSongs = playlist2.querySelectorAll('audio');
+        for (const song of allSongs) {
+            song.pause();
+        }
+    });
+
+    previousButton2.addEventListener('click', () => {
+        const allSongs = playlist2.querySelectorAll('audio');
+        const previousSongIndex = (currentSongIndex2 - 1 + allSongs.length) % allSongs.length;
+
+        allSongs[currentSongIndex2].pause();
+        allSongs[previousSongIndex].play();
+        currentSongIndex2 = previousSongIndex;
+        updateNowPlayingInfo();
+    });
+
+    nextButton2.addEventListener('click', playNextSong);
+
+    shuffleButton2.addEventListener('click', () => {
+        isShuffled2 = !isShuffled2;
+        shuffleButton2.textContent = isShuffled2 ? 'Desativar Aleatório' : 'Ativar Aleatório';
+    });
+
+    for (const song of playlist2.querySelectorAll('audio')) {
+        song.addEventListener('playing', () => {
+            currentSongIndex2 = playlist2.querySelectorAll('audio').indexOf(song);
+            updateNowPlayingInfo();
+        });
+
+        song.addEventListener('ended', () => {
+            playNextSong();
+        });
+    }
+
+    function playNextSong() {
+        let nextSongIndex;
+        if (isShuffled2) {
+            do {
+                nextSongIndex = Math.floor(Math.random() * playlist2.querySelectorAll('audio').length);
+            } while (nextSongIndex === currentSongIndex2);
+        } else {
+            nextSongIndex = (currentSongIndex2 + 1) % playlist2.querySelectorAll('audio').length;
+        }
+
+        const allSongs = playlist2.querySelectorAll('audio');
+        allSongs[currentSongIndex2].pause();
+        allSongs[nextSongIndex].play();
+        currentSongIndex2 = nextSongIndex;
+        updateNowPlayingInfo();
+    }
+
+</script>
+<script>
+
+    const inputFiltro = document.querySelector('.filtro');
+    const albumContainer = document.querySelector('.album-container');
+    const albums = albumContainer.querySelectorAll('.card_planos3');
+
+    inputFiltro.addEventListener('input', function () {
+        const filtro = inputFiltro.value.toLowerCase();
+
+        albums.forEach(album => {
+            const albumNome = album.querySelector('strong').textContent.toLowerCase();
+
+            if (albumNome.includes(filtro)) {
+                album.style.display = 'flex';
+                album_vazio.style.display = 'none'
+                open_music.style.display = 'flex'
+                line_music.style.display = 'flex'
+            } else {
+                album.style.display = 'none';
+                open_music.style.display = 'none'
+                album_vazio.style.display = 'flex'
+                line_music.style.display = 'none'
+                musics.style.display = 'none'
+                album_container.style.display = "none"
+            }
+        });
+    });
+</script>
+
+
+<script src="../js/app.js"></script>
+<!-- gerador de arquivos, como excel, pdf, e imprimir -->
+<script>
+    $(function () {
+        $("#all_users").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": false,
+        }).buttons().container().appendTo('#all_users_wrapper .col-md-6:eq(0)');
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+        });
+    });
+
+</script>
+
+<script src="../plugins/jszip/jszip.min.js"></script>
+<script src="../plugins/pdfmake/pdfmake.min.js"></script>
+<script src="../plugins/pdfmake/vfs_fonts.js"></script>
+
+
+<script>
+    // script.js
+
+    const musicList = document.querySelectorAll('.music-list li');
+
+    musicList.forEach(musicItem => {
+        musicItem.addEventListener('click', () => {
+            const audioElement = musicItem.querySelector('audio');
+            audioElement.play();
+            // Opcional: Pausar outras músicas em reprodução
+            musicList.forEach(otherItem => {
+                if (otherItem !== musicItem) {
+                    const otherAudio = otherItem.querySelector('audio');
+                    otherAudio.pause();
+                }
+            });
+        });
+    });
+
+</script>
+
+
+<script>
+    const inputImage = document.getElementById('input-image');
+    const previewImage = document.getElementById('preview-image');
+    const errorMessage = document.getElementById('error-message');
+
+    inputImage.addEventListener('change', function () {
+        const file = this.files[0];
+
+        if (file) {
+            // Validar tamanho da imagem
+            if (file.size > 400000) {
+                window.alert("Erro: A imagem deve ter no máximo 400 de altula e largura.")
+                this.value = '';
+                return;
+            }
+
+            // Validar formato da imagem
+            const allowedExtensions = ['png', 'jpg'];
+            const fileExtension = file.name.split('.').pop().toLowerCase();
+            if (!allowedExtensions.includes(fileExtension)) {
+                window.alert("Erro: Formato de imagem inválido. Selecione PNG ou JPG.")
+
+                return;
+            }
+
+            // Limpar mensagem de erro
+            errorMessage.textContent = '';
+
+            // Ler a imagem como data URL e definir a pré-visualização
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                previewImage.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+</script>
+
+<script>
+    document.getElementsByClassName("arquivo-audio").addEventListener("change", (event) => {
+        const arquivo = event.target.files[0];
+        const audio = document.getElementsByClassName("audio");
+
+        audio.src = URL.createObjectURL(arquivo);
+    });
+
+</script>
+
+
+</html>

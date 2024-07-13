@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wason Upfy</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/libs/scrollue.css">
+    <link rel="shortcut icon" href="../imgs/logo.jpg" type="image/x-icon">
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/javascript.js"></script>
+</head>
+
+<style>
+    #preview-image {
+        width: 400px;
+        height: auto;
+        border: 1px solid #c71585;
+        border-radius: 20px;
+        margin-bottom: 10px;
+    }
+</style>
+
+<body style="background-color: black; color: white;">
+    <header class="fixed-top">
+        <nav class="navbar bg-body-tertiary ">
+            <div class="container-fluid">
+                <div>
+                    <a class="navbar-brand" href="painel.html"><img src="../imgs/logo.jpg" class="logo"
+                            alt="Wason Upfy"></a>
+                </div>
+
+                <div class="container_link1">
+                    <a class="link_navbar" href="painel.html">Painel de Controlo</a>
+                    <a class="link_navbar" href="musics-albuns.html">Minhas músicas</a>
+                    <a class="link_navbar" href="#"style=" color: #c71585; border-bottom: 1px solid #c71585;  padding: 0 5px;">Finanças</a>
+                    <a class="link_navbar" href="estatistic.html">Estatísticas</a>
+                    <a class="link_navbar" href="planos.html">Nossos Planos</a>
+                    <a class="link_navbar" href="configuration.html">Configurações</a>
+
+                </div>
+                <button class="navbar-toggler btn_menu" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-menu" style="color: #c71585;">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel" style="background-color: black; color: #c71585;">
+                    <div class="offcanvas-header" style="padding: 20px 30px 0 30px;">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Wason Upfy</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
+                            style=" background-color: #c71585;">
+                        </button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" style="row-gap: 10px;">
+                            <a class="link_navbar" href="painel.html">Painel de Controlo</a>
+                    <a class="link_navbar" href="musics-albuns.html">Minhas músicas</a>
+                    <a class="link_navbar" href="#"style=" color: #c71585; border-bottom: 1px solid #c71585;  padding: 0 5px;">Finanças</a>
+                    <a class="link_navbar" href="estatistic.html">Estatísticas</a>
+                    <a class="link_navbar" href="planos.html">Nossos Planos</a>
+                    <a class="link_navbar" href="configuration.html">Configurações</a>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!---------------INICIO DO BACKEND---------------->
+    <main class="main_blog">
+        <div class="container_blog">
+            <div style="width: 700px; padding: 10px; border: #c71585 solid 1px; border-radius: 20px;" id="usd">
+                <h4 style="text-align: center;">Bem-vindo, Artista</h4>
+
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <h6>SALDO DISPONIVEL</h6>
+                    </div>
+
+                    <div
+                        style="border: #c71585 solid 1px; width: 91px; height: 31px;margin-bottom: 10px; display: flex; justify-content: space-between; border-radius: 10px;">
+                        <button type="button" class="btn btn-sm"
+                            style="color: white; border-top-left-radius: 10px; border-bottom-left-radius: 10px;">USD</button>
+                        <button type="button" class="btn btn-sm"
+                            style="background-color: #c71585; color: white; border-bottom-right-radius: 10px; border-top-right-radius: 10px;"
+                            onclick="open_card_money1()">AOA</button>
+                    </div>
+                </div>
+
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <div>
+                        <h4>US$0,00</h4>
+                    </div>
+
+                    <div>
+                        <button type="button" class="btn"
+                            style="background-color: #c71585; color: white;" onclick="open_transferencia()">Transferir</button>
+                    </div>
+                </div>
+           
+            </div>
+
+            <div style="width: 700px; padding: 10px; border: #c71585 solid 1px; border-radius: 20px;" id="aoa">
+                <h4 style="text-align: center;">Bem-vindo, Artista</h4>
+
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <h6>SALDO DISPONIVEL</h6>
+                    </div>
+
+                    <div
+                        style="border: #c71585 solid 1px; width: 91px; height: 31px;margin-bottom: 10px; display: flex; justify-content: space-between; border-radius: 10px;">
+                        <button type="button" class="btn btn-sm"
+                            style="background-color: #c71585; color: white; border-top-left-radius: 10px; border-bottom-left-radius: 10px;"
+                            onclick="open_card_money2()">USD</button>
+                        <button type="button" class="btn btn-sm"
+                            style="color: white; border-bottom-right-radius: 10px; border-top-right-radius: 10px;">AOA</button>
+                    </div>
+                </div>
+
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <div>
+                        <h4>0,00Kz</h4>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="btn"
+                            style="background-color: #c71585; color: white;" onclick="open_transferencia()">Transferir</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </main>
+    <div style="display: flex; align-items: center; justify-content: center;">
+        <a href="contas_bancarias.html" class="btn btn_contas">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="35" fill="currentColor" class="bi bi-bank" viewBox="0 0 16 16">
+                    <path d="M8 .95 14.61 4h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.379l.5 2A.5.5 0 0 1 15.5 17H.5a.5.5 0 0 1-.485-.621l.5-2A.5.5 0 0 1 1 14V7H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 4h.89L8 .95zM3.776 4h8.447L8 2.05 3.776 4zM2 7v7h1V7H2zm2 0v7h2.5V7H4zm3.5 0v7h1V7h-1zm2 0v7H12V7H9.5zM13 7v7h1V7h-1zm2-1V5H1v1h14zm-.39 9H1.39l-.25 1h13.72l-.25-1z"/>
+                  </svg>
+            </div>
+            <span>Conta(s) Bancária(s)</span>
+        </a>
+    </div>
+   
+    <hr>
+    <section id="transferencia">
+        <div class="container_forms container">
+            <h3 style="margin-bottom: 30px;">Transfêrencia</h3>
+            <form action="painel.html" method="post">
+                <div class="input_gruop2">
+                    <div class="form-floating" style="width: 100%; color: white;">
+                        <input type="text" class="form-control" id="" placeholder="nome@email.com"
+                            required autocomplete="name" name="">
+                        <label for="">Nome do destinatário</label>
+                    </div>
+
+                    <div class="form-floating" style="width: 100%; color: white;">
+                        <input type="text" class="form-control" id="" placeholder="nome@email.com" required
+                            autocomplete="cc-number" name="nome">
+                        <label for="">IBAN do Destinatário</label>
+                    </div>
+                  
+                </div>
+                <div class="form-floating" style="width: 100%; color: white;">
+                    <input type="number" class="form-control" id="" placeholder="nome@email.com" required
+                        autocomplete="email" name="">
+                    <label for="">Valor a transferir</label>
+                </div>
+
+                <div class="form-floating" style="width: 100%; color: white;">
+                    <textarea name="" style="width: 100%; padding: 20px;" required placeholder="Descrição (Opcional)..."></textarea>
+                </div>
+
+                <button type="submit" class="btn" style="background-color: #c71585; color: white; width: 100%;">Transferir</button>
+            </form>
+        </div>
+
+    </section>
+    
+    <div class="container_table container" style="margin-bottom: 20px;">
+        <div class="card flex-fill padding_table" style=" background-color: transparent; border: #c71585 solid 1px;">
+            <div class="card-header">
+                <div class="row" style="border-bottom: #c71585 solid 1px;">
+                    <div class="col-auto d-sm-block" style="margin-bottom: 20px;">
+                        <h5 class="card-title mb-0">Royalites de distribuição</h5>
+                    </div>
+                </div>
+            </div>
+
+            <table class="table table-responsive" id="all_users" style=" color: white;">
+                <thead>
+                    <tr>
+                        <th>TRACK</th>
+                        <th>ISRC</th>
+                        <th>STREAMS</th>
+                        <th>MOEDA</th>
+                        <th>VALOR BRUTO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>444</td>
+                        <td>10111</td>
+                        <td>098444</td>
+                        <td>2000</td>
+                        <td>KZ</td>
+                    </tr>
+
+                    <tr>
+                        <td>444</td>
+                        <td>10111</td>
+                        <td>098444</td>
+                        <td>2000</td>
+                        <td>KZ</td>
+                    </tr>
+
+                    <tr>
+                        <td>444</td>
+                        <td>10111</td>
+                        <td>098444</td>
+                        <td>2000</td>
+                        <td>KZ</td>
+                    </tr>
+
+                   
+                </tbody>
+            </table>
+
+         
+        </div>
+    </div>  
+
+    <div class="container_table container" style="margin-bottom: 20px;">
+        <div class="card flex-fill padding_table" style=" background-color: transparent; border: #c71585 solid 1px;">
+            <div class="card-header">
+                <div class="row" style="border-bottom: #c71585 solid 1px;">
+                    <div class="col-auto d-sm-block" style="margin-bottom: 20px;">
+                        <h5 class="card-title mb-0">Transfêrencia realizadas</h5>
+                    </div>
+                </div>
+            </div>
+
+            <table class="table table-responsive" id="all_users2" style=" color: white;">
+                <thead>
+                    <tr>
+                        <th>E-MAIL</th>
+                        <th>CONTA BANCÁRIA</th>
+                        <th>STATUS</th>
+                        <th>TAXA</th>
+                        <th>COMPROVATIVO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nome@gmail.com</td>
+                        <td>Multicaxa Express</td>
+                        <td>Pago</td>
+                        <td>10%</td>
+                        <td>Download</td>
+                    </tr>
+
+                    <tr>
+                        <td>nome@gmail.com</td>
+                        <td>Multicaxa Express</td>
+                        <td>Pago</td>
+                        <td>10%</td>
+                        <td>Download</td>
+                    </tr>
+
+                    <tr>
+                        <td>nome@gmail.com</td>
+                        <td>Multicaxa Express</td>
+                        <td>Pago</td>
+                        <td>10%</td>
+                        <td>Download</td>
+                    </tr>
+
+
+                   
+                </tbody>
+            </table>
+
+         
+        </div>
+    </div>  
+
+    
+    <div class="container_table container" style="margin-bottom: 20px;">
+        <div class="card flex-fill padding_table" style=" background-color: transparent; border: #c71585 solid 1px;">
+            <div class="card-header">
+                <div class="row" style="border-bottom: #c71585 solid 1px;">
+                    <div class="col-auto d-sm-block" style="margin-bottom: 20px;">
+                        <h5 class="card-title mb-0">Compartilhamentos Pagos</h5>
+                    </div>
+                </div>
+            </div>
+
+            <table class="table table-responsive" id="all_users3" style=" color: white;">
+                <thead>
+                    <tr>
+                        <th>TRACK</th>
+                        <th>Plataforma</th>
+                        <th>STREAMS/VENDAS</th>
+                        <th>MOEDA</th>
+                        <th>TAXA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>444</td>
+                        <td>Spotify</td>
+                        <td>098444</td>
+                        <td>KZ</td>
+                        <td>20%</td>
+                    </tr>
+
+                    <tr>
+                        <td>444</td>
+                        <td>Spotify</td>
+                        <td>098444</td>
+                        <td>KZ</td>
+                        <td>20%</td>
+                    </tr>
+
+                    <tr>
+                        <td>444</td>
+                        <td>Spotify</td>
+                        <td>098444</td>
+                        <td>KZ</td>
+                        <td>20%</td>
+                    </tr>
+
+                    <tr>
+                        <td>444</td>
+                        <td>Spotify</td>
+                        <td>098444</td>
+                        <td>KZ</td>
+                        <td>20%</td>
+                    </tr>
+                   
+                </tbody>
+            </table>
+
+         
+        </div>
+    </div>  
+    <!---------------FIM DO BACKEND---------------->
+
+
+</body>
+
+<script src="../js/app.js"></script>
+<!-- gerador de arquivos, como excel, pdf, e imprimir -->
+<script>
+    $(function () {
+        $("#all_users").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": false,
+        }).buttons().container().appendTo('#all_users_wrapper .col-md-6:eq(0)');
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+        });
+    });
+
+</script>
+
+<script>
+    $(function () {
+        $("#all_users2").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": false,
+        }).buttons().container().appendTo('#all_users_wrapper .col-md-6:eq(0)');
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+        });
+    });
+
+</script>
+
+<script>
+    $(function () {
+        $("#all_users3").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": false,
+        }).buttons().container().appendTo('#all_users_wrapper .col-md-6:eq(0)');
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+        });
+    });
+
+</script>
+<script src="../plugins/jszip/jszip.min.js"></script>
+<script src="../plugins/pdfmake/pdfmake.min.js"></script>
+<script src="../plugins/pdfmake/vfs_fonts.js"></script>
+
+
+
+</html>

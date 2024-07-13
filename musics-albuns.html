@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wason Upfy</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/libs/scrollue.css">
+    <link rel="shortcut icon" href="../imgs/logo.jpg" type="image/x-icon">
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/javascript.js"></script>
+</head>
+
+<style>
+    #preview-image {
+        width: 400px;
+        height: auto;
+        border: 1px solid #c71585;
+        border-radius: 20px;
+        margin-bottom: 10px;
+    }
+</style>
+
+<body style="background-color: black; color: white;">
+    <header class="fixed-top">
+        <nav class="navbar bg-body-tertiary ">
+            <div class="container-fluid">
+                <div>
+                    <a class="navbar-brand" href="painel.html"><img src="../imgs/logo.jpg" class="logo"
+                            alt="Wason Upfy"></a>
+                </div>
+
+                <div class="container_link1">
+                    <a class="link_navbar" href="painel.html">Painel de Controlo</a>
+                    <a class="link_navbar" href="#"
+                        style=" color: #c71585; border-bottom: 1px solid #c71585;  padding: 0 5px;">Minhas músicas</a>
+                    <a class="link_navbar" href="financa.html">Finanças</a>
+                    <a class="link_navbar" href="estatistic.html">Estatísticas</a>
+                    <a class="link_navbar" href="planos.html">Nossos Planos</a>
+                    <a class="link_navbar" href="configuration.html">Configurações</a>
+
+                </div>
+                <button class="navbar-toggler btn_menu" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-menu" style="color: #c71585;">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel" style="background-color: black; color: #c71585;">
+                    <div class="offcanvas-header" style="padding: 20px 30px 0 30px;">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Wason Upfy</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
+                            style=" background-color: #c71585;">
+                        </button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" style="row-gap: 10px;">
+                            <a class="link_navbar" href="painel.html">Painel de Controlo</a>
+                            <a class="link_navbar" href="#"
+                                style=" color: #c71585; border-bottom: 1px solid #c71585;  padding: 0 5px;">Minhas
+                                músicas</a>
+                            <a class="link_navbar" href="financa.html">Finanças</a>
+                            <a class="link_navbar" href="estatistic.html">Estatísticas</a>
+                            <a class="link_navbar" href="planos.html">Nossos Planos</a>
+                            <a class="link_navbar" href="configuration.html">Configurações</a>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!---------------INICIO DO BACKEND---------------->
+
+    <main class="main_blog" style="margin-top: 100px; width: 100%;">
+        <!---------------INICIO DO ALBUM DO USUÁRIO---------------->
+
+        <div class="album" id="albuns">
+            <header class="album-header" style="margin-bottom: 6px;" id="headerAlbum">
+                <div class="header_body">
+                    <div>
+                        <h3 id="titleAlbum">Meu(s) Álbun(s)</h3>
+                    </div>
+                    <button type="button" class="btn" id="button_add_album"
+                        style="background-color: #c71585; color: white;" onclick="open_addAlbum()">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-plus">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                        Adicionar Album</button>
+
+                    <button type="button" class="btn" id="button_voltar_album"
+                        style="background-color: #c71585; color: white;" onclick="voltar_containerAlbuns()">
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-arrow-left">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>Voltar para
+                        o(s) álbun(s)</button>
+                    <a href="painel.html" class="btn" style="background-color: #c71585; color: white;">
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-arrow-left">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
+                        Voltar para o Painel de Controlo
+                    </a>
+                </div>
+                <div class="input-group" style="width: 300px; margin: 6px 0;">
+                    <!-- caixa cinza -->
+                    <span class="input-group-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-search">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg></span>
+
+                    <!-- entrada -->
+
+                    <input type="search" class="form-control filtro" aria-label="Valor" id="search_albuns"
+                        placeholder="Pesquisar Albuns">
+                </div>
+            </header>
+
+            <main class="album-main"
+                style="width: 100%; display: flex; justify-content: flex-start; flex-direction: column;">
+                <!---------------INICIO DO ALBUM (LOOP)---------------->
+                <div class="album-container" id="containerAlbuns"
+                    style="backdrop-filter: blur(30px); box-shadow: 0 0 20px #540037; margin-bottom: 10px; padding: 15px;">
+
+                    <div class="card card_planos3">
+                        <div class="card-body">
+                            <div class="card_top">
+                                <img src="../imgs/fundo1.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div style="display: flex; justify-content: center; text-align: center;">
+                                <div>
+                                    <p class="card-text">
+                                    <h6 class="name_search">Título do Album: <strong
+                                            style="font-size: large;">nome</strong></h6>
+                                    <p>Nome do Artista: xxxxxxxxxxxxxxxxxxx</p>
+                                    </p>
+                                </div>
+
+
+                            </div>
+                            <div id="open_music">
+                                <a href="musics-faixas.html" class="btn"
+                                    style="background-color: #c71585; color: white; width: 90%; align-items: center;">Abrir
+                                    Fixas
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-chevron-down">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="album_vazio"
+                        style="justify-content: center; padding: 40px; text-align: center; width: 100%;">
+                        <h3 style="text-align: center;">Nenhum album encontrado com esta referência</h3>
+                    </div>
+                </div>
+
+                <div class="album-containe2" id="addAlbum"
+                    style="backdrop-filter: blur(30px); box-shadow: 0 0 20px #540037; margin-bottom: 10px; padding: 15px;">
+                    <div>
+                        <form action="musics-albuns.html" method="post">
+
+                            <div id="criarAlbum_1">
+                                <h4 style="text-align: center; margin-bottom: 20px;">Gerarando um Álbum - 1º Passo</h4>
+                                <div class="input_gruop" style="margin-bottom: 20px;">
+                                    <div class="form-floating" style="width: 100%; color: white;"
+                                        onclick="fechar_info_input()">
+                                        <input type="text" class="form-control" id="nome_albun"
+                                            placeholder="nome@email.com" required autocomplete="off" name="nome"
+                                            oninput="mostrarPreview()">
+                                        <!---------------INPUT - ALTERAR O NAME ---------------->
+                                        <label for="">Título do álbum, single ou EP</label>
+                                    </div>
+
+                                    <div class="form-floating" style="width: 100%; color: white;"
+                                        onclick="info_input()">
+                                        <input type="text" class="form-control" id="nome_artiste_album"
+                                            placeholder="nome@email.com" required autocomplete="off" name=""
+                                            oninput="mostrarPreview2()">
+                                        <!---------------INPUT - ALTERAR O NAME ---------------->
+                                        <label for="">Artista ou banda/grupo </label>
+                                        <div id="artist_info" class="alert alert-info" style="flex-direction: column;">
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-arrow-up">
+                                                    <line x1="12" y1="19" x2="12" y2="5"></line>
+                                                    <polyline points="5 12 12 5 19 12"></polyline>
+                                                </svg>
+                                            </div>
+                                            Adiciona aqui o artista principal deste álbum,
+                                            em caso de ser uma calaboração adicione os dois artistas aqui. <br>
+                                            EX: artista ou artista 1, asrtista 2...
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="input_gruop">
+                                    <div class="form-floating" style="width: 100%; color: white;"
+                                        onclick="fechar_info_input()">
+
+                                        <input type="text" id="genero_1_album" class="form-control"
+                                            name="tipo_de_solicitacao_web" required placeholder="Insira o nome do album"
+                                            list="web" oninput="mostrarPreview3()">
+                                        <!---------------INPUT - ALTERAR O NAME ---------------->
+                                        <label for="">Gênero principal</label>
+
+                                        <datalist id="web">
+                                            <select name="album" id="web">
+                                                <optgroup label="Selecione o nome album">
+                                                    <option value="Apala"></option>
+                                                    <option value="Afro Pop"></option>
+                                                    <option value="Afrobeat"></option>
+                                                    <option value="Amapiano"></option>
+                                                    <option value="Axé"></option>
+                                                    <option value="Ambassel"></option>
+                                                    <option value="Acid Jazz"></option>
+                                                    <option value="Arabesque"></option>
+                                                    <option value="Bossa Nova"></option>
+                                                    <option value="Bongo Flava"></option>
+                                                    <option value="Bikutsi"></option>
+                                                    <option value="Baila"></option>
+                                                    <option value="Blues"></option>
+                                                    <option value="Black Music"></option>
+                                                    <option value="Brega"></option>
+                                                    <option value="Balada"></option>
+                                                    <option value="Barroco"></option>
+                                                    <option value="Byzantine"></option>
+                                                    <option value="Bolero"></option>
+                                                    <option value="Bachata"></option>
+                                                    <option value="Bati"></option>
+                                                    <option value="Bard"></option>
+                                                    <option value="Bomba"></option>
+                                                    <option value="Cape Jazz"></option>
+                                                    <option value="Chimurenca"></option>
+                                                    <option value="Calypso"></option>
+                                                    <option value="Cha-cha-chá"></option>
+                                                    <option value="Country"></option>
+                                                    <option value="Chillout"></option>
+                                                    <option value="Clássico"></option>
+                                                    <option value="Classic Rock"></option>
+                                                    <option value="Choro"></option>
+                                                    <option value="Cabaré"></option>
+                                                    <option value="Cantopop"></option>
+                                                    <option value="Cumbia"></option>
+                                                    <option value="Caribbean"></option>
+                                                    <option value="Chicheros"></option>
+                                                    <option value="Chaabi"></option>
+                                                    <option value="Carnati"></option>
+                                                    <option value="Chanson"></option>
+                                                    <option value="Celtic"></option>
+                                                    <option value="Criolla"></option>
+                                                    <option value="Dance"></option>
+                                                    <option value="Disco"></option>
+                                                    <option value="Dancehall"></option>
+                                                    <option value="Dansband"></option>
+                                                    <option value="Death Metal"></option>
+                                                    <option value="Eletro Pop"></option>
+                                                    <option value="Eletro Swing"></option>
+                                                    <option value="Emocore"></option>
+                                                    <option value="Evangélico"></option>
+                                                    <option value="Early Music"></option>
+                                                    <option value="Extempo"></option>
+                                                    <option value="Flamenco"></option>
+                                                    <option value="Fado"></option>
+                                                    <option value="Folk"></option>
+                                                    <option value="Forró"></option>
+                                                    <option value="Fandango"></option>
+                                                    <option value="Funk"></option>
+                                                    <option value="Funk Carioca"></option>
+                                                    <option value="Frevo"></option>
+                                                    <option value="Genge"></option>
+                                                    <option value="Gqom"></option>
+                                                    <option value="Gospel"></option>
+                                                    <option value="Gospel Religioso"></option>
+                                                    <option value="Gótico"></option>
+                                                    <option value="Grunge"></option>
+                                                    <option value="Garage"></option>
+                                                    <option value="Greek Folk"></option>
+                                                    <option value="Game Music"></option>
+                                                    <option value="Gagaku"></option>
+                                                    <option value="Gurung"></option>
+                                                    <option value="Garifuna"></option>
+                                                    <option value="Gnawa"></option>
+                                                    <option value="Gregorian"></option>
+                                                    <option value="Ghazal"></option>
+                                                    <option value="Gusle"></option>
+                                                    <option value="Ganga"></option>
+                                                    <option value="Hiplife"></option>
+                                                    <option value="Hip Hop"></option>
+                                                    <option value="Hard Rock"></option>
+                                                    <option value="Hardcore"></option>
+                                                    <option value="Heavy Metal"></option>
+                                                    <option value="House"></option>
+                                                    <option value="Hybrid"></option>
+                                                    <option value="Igbo"></option>
+                                                    <option value="Indie"></option>
+                                                    <option value="Industrial"></option>
+                                                    <option value="Infantil"></option>
+                                                    <option value="Instrumental"></option>
+                                                    <option value="Iskelma"></option>
+                                                    <option value="J-pop"></option>
+                                                    <option value="J-rock"></option>
+                                                    <option value="Jovem Guarda"></option>
+                                                    <option value="Joropo"></option>
+                                                    <option value="K-pop"></option>
+                                                    <option value="K-rock"></option>
+                                                    <option value="Kizomba"></option>
+                                                    <option value="Kagura"></option>
+                                                    <option value="Kirat"></option>
+                                                    <option value="Kont"></option>
+                                                    <option value="Klapa"></option>
+                                                    <option value="Kuduro"></option>
+                                                    <option value="Lavani"></option>
+                                                    <option value="Lambada"></option>
+                                                    <option value="Lounge"></option>
+                                                    <option value="Laiko"></option>
+                                                    <option value="Luk thung"></option>
+                                                    <option value="Morna"></option>
+                                                    <option value="Makossa"></option>
+                                                    <option value="Mandopop"></option>
+                                                    <option value="Morlam"></option>
+                                                    <option value="Mambo"></option>
+                                                    <option value="Merengue"></option>
+                                                    <option value="Metal"></option>
+                                                    <option value="MPB"></option>
+                                                    <option value="Maracatu"></option>
+                                                    <option value="Marcha"></option>
+                                                    <option value="Mariachi"></option>
+                                                    <option value="Marimba"></option>
+                                                    <option value="Mejorana"></option>
+                                                    <option value="Musette"></option>
+                                                    <option value="New Age"></option>
+                                                    <option value="New Wake"></option>
+                                                    <option value="Neo Folk"></option>
+                                                    <option value="Norteño"></option>
+                                                    <option value="Nep-hop"></option>
+                                                    <option value="Nongaki"></option>
+                                                    <option value="Ópera"></option>
+                                                    <option value="Onda Etérea"></option>
+                                                    <option value="Pop"></option>
+                                                    <option value="Pop Rock"></option>
+                                                    <option value="P-pop"></option>
+                                                    <option value="Pop Indiano"></option>
+                                                    <option value="Punta Rock"></option>
+                                                    <option value="Piano Rock"></option>
+                                                    <option value="Pagode"></option>
+                                                    <option value="Punk"></option>
+                                                    <option value="Pós-punk"></option>
+                                                    <option value="Post-rock"></option>
+                                                    <option value="Progressivo"></option>
+                                                    <option value="Psicodelia"></option>
+                                                    <option value="Punk Rock"></option>
+                                                    <option value="Pasillo"></option>
+                                                    <option value="Pasacall"></option>
+                                                    <option value="Post-britpop"></option>
+                                                    <option value="Punjabi"></option>
+                                                    <option value="Pansori"></option>
+                                                    <option value="Plena"></option>
+                                                    <option value="Progg"></option>
+                                                    <option value="Rumba"></option>
+                                                    <option value="Ragini"></option>
+                                                    <option value="R&B"></option>
+                                                    <option value="Rap"></option>
+                                                    <option value="Reggae"></option>
+                                                    <option value="Reggaeton"></option>
+                                                    <option value="Regional"></option>
+                                                    <option value="Rock"></option>
+                                                    <option value="Rock Alternativo"></option>
+                                                    <option value="Rock Nacional"></option>
+                                                    <option value="Rockability"></option>
+                                                    <option value="Romântico"></option>
+                                                    <option value="Ratna Music"></option>
+                                                    <option value="Ranchera"></option>
+                                                    <option value="Samba"></option>
+                                                    <option value="Samba Enredo"></option>
+                                                    <option value="Semba"></option>
+                                                    <option value="Sertanejo"></option>
+                                                    <option value="Ska"></option>
+                                                    <option value="Soft Rock"></option>
+                                                    <option value="Soul Music"></option>
+                                                    <option value="Swing"></option>
+                                                    <option value="Salsa"></option>
+                                                    <option value="Surf Pop"></option>
+                                                    <option value="Sacra"></option>
+                                                    <option value="Samples"></option>
+                                                    <option value="Sami Music"></option>
+                                                    <option value="Sherpa"></option>
+                                                    <option value="Saloma"></option>
+                                                    <option value="Soca Sanjo"></option>
+                                                    <option value="Sufi"></option>
+                                                    <option value="Sevdalinka"></option>
+                                                    <option value="Tecno"></option>
+                                                    <option value="Tecno Pop"></option>
+                                                    <option value="Trance"></option>
+                                                    <option value="Trap"></option>
+                                                    <option value="Trilha Sonora"></option>
+                                                    <option value="Trip-hop"></option>
+                                                    <option value="Tropical House"></option>
+                                                    <option value="Tango Tarantela"></option>
+                                                    <option value="Tamborito"></option>
+                                                    <option value="Tex-mex"></option>
+                                                    <option value="Tezeta"></option>
+                                                    <option value="Trot Tamburica"></option>
+                                                    <option value="Taarab"></option>
+                                                    <option value="Trip hop"></option>
+                                                    <option value="Urban Pasifika"></option>
+                                                    <option value="V-pop"></option>
+                                                    <option value="Vanerão"></option>
+                                                    <option value="Velha Guarda"></option>
+                                                    <option value="Vaporwave"></option>
+                                                    <option value="Valsa"></option>
+                                                    <option value="Vallenato"></option>
+                                                    <option value="World Music"></option>
+                                                    <option value="World Beat Wadaiko"></option>
+                                                    <option value="Western"></option>
+                                                    <option value="Xöömii"></option>
+                                                    <option value="Yarabi"></option>
+                                                    <option value="Yéyé"></option>
+                                                    <option value="Zouglou"></option>
+                                                    <option value="Zarzuela"></option>
+                                                    <option value="Zouk"></option>
+                                                </optgroup>
+                                            </select>
+                                        </datalist>
+                                    </div>
+
+                                    <div class="form-floating" style="width: 100%; color: white;"
+                                        onclick="fechar_info_input()">
+                                        <input type="text" id="genero_2_album" class="form-control"
+                                            name="tipo_de_solicitacao_web" required placeholder="Insira o nome do album"
+                                            list="web2" style="margin-bottom: 20px;" oninput="mostrarPreview4()">
+                                        <!---------------INPUT - ALTERAR O NAME ---------------->
+                                        <label for="">Gênero Secundário</label>
+
+                                        <datalist id="web2">
+                                            <select name="album2" id="web2">
+                                                <optgroup label="Selecione o nome album">
+                                                    <option value="Apala"></option>
+                                                    <option value="Afro Pop"></option>
+                                                    <option value="Afrobeat"></option>
+                                                    <option value="Amapiano"></option>
+                                                    <option value="Axé"></option>
+                                                    <option value="Ambassel"></option>
+                                                    <option value="Acid Jazz"></option>
+                                                    <option value="Arabesque"></option>
+                                                    <option value="Bossa Nova"></option>
+                                                    <option value="Bongo Flava"></option>
+                                                    <option value="Bikutsi"></option>
+                                                    <option value="Baila"></option>
+                                                    <option value="Blues"></option>
+                                                    <option value="Black Music"></option>
+                                                    <option value="Brega"></option>
+                                                    <option value="Balada"></option>
+                                                    <option value="Barroco"></option>
+                                                    <option value="Byzantine"></option>
+                                                    <option value="Bolero"></option>
+                                                    <option value="Bachata"></option>
+                                                    <option value="Bati"></option>
+                                                    <option value="Bard"></option>
+                                                    <option value="Bomba"></option>
+                                                    <option value="Cape Jazz"></option>
+                                                    <option value="Chimurenca"></option>
+                                                    <option value="Calypso"></option>
+                                                    <option value="Cha-cha-chá"></option>
+                                                    <option value="Country"></option>
+                                                    <option value="Chillout"></option>
+                                                    <option value="Clássico"></option>
+                                                    <option value="Classic Rock"></option>
+                                                    <option value="Choro"></option>
+                                                    <option value="Cabaré"></option>
+                                                    <option value="Cantopop"></option>
+                                                    <option value="Cumbia"></option>
+                                                    <option value="Caribbean"></option>
+                                                    <option value="Chicheros"></option>
+                                                    <option value="Chaabi"></option>
+                                                    <option value="Carnati"></option>
+                                                    <option value="Chanson"></option>
+                                                    <option value="Celtic"></option>
+                                                    <option value="Criolla"></option>
+                                                    <option value="Dance"></option>
+                                                    <option value="Disco"></option>
+                                                    <option value="Dancehall"></option>
+                                                    <option value="Dansband"></option>
+                                                    <option value="Death Metal"></option>
+                                                    <option value="Eletro Pop"></option>
+                                                    <option value="Eletro Swing"></option>
+                                                    <option value="Emocore"></option>
+                                                    <option value="Evangélico"></option>
+                                                    <option value="Early Music"></option>
+                                                    <option value="Extempo"></option>
+                                                    <option value="Flamenco"></option>
+                                                    <option value="Fado"></option>
+                                                    <option value="Folk"></option>
+                                                    <option value="Forró"></option>
+                                                    <option value="Fandango"></option>
+                                                    <option value="Funk"></option>
+                                                    <option value="Funk Carioca"></option>
+                                                    <option value="Frevo"></option>
+                                                    <option value="Genge"></option>
+                                                    <option value="Gqom"></option>
+                                                    <option value="Gospel"></option>
+                                                    <option value="Gospel Religioso"></option>
+                                                    <option value="Gótico"></option>
+                                                    <option value="Grunge"></option>
+                                                    <option value="Garage"></option>
+                                                    <option value="Greek Folk"></option>
+                                                    <option value="Game Music"></option>
+                                                    <option value="Gagaku"></option>
+                                                    <option value="Gurung"></option>
+                                                    <option value="Garifuna"></option>
+                                                    <option value="Gnawa"></option>
+                                                    <option value="Gregorian"></option>
+                                                    <option value="Ghazal"></option>
+                                                    <option value="Gusle"></option>
+                                                    <option value="Ganga"></option>
+                                                    <option value="Hiplife"></option>
+                                                    <option value="Hip Hop"></option>
+                                                    <option value="Hard Rock"></option>
+                                                    <option value="Hardcore"></option>
+                                                    <option value="Heavy Metal"></option>
+                                                    <option value="House"></option>
+                                                    <option value="Hybrid"></option>
+                                                    <option value="Igbo"></option>
+                                                    <option value="Indie"></option>
+                                                    <option value="Industrial"></option>
+                                                    <option value="Infantil"></option>
+                                                    <option value="Instrumental"></option>
+                                                    <option value="Iskelma"></option>
+                                                    <option value="J-pop"></option>
+                                                    <option value="J-rock"></option>
+                                                    <option value="Jovem Guarda"></option>
+                                                    <option value="Joropo"></option>
+                                                    <option value="K-pop"></option>
+                                                    <option value="K-rock"></option>
+                                                    <option value="Kizomba"></option>
+                                                    <option value="Kagura"></option>
+                                                    <option value="Kirat"></option>
+                                                    <option value="Kont"></option>
+                                                    <option value="Klapa"></option>
+                                                    <option value="Kuduro"></option>
+                                                    <option value="Lavani"></option>
+                                                    <option value="Lambada"></option>
+                                                    <option value="Lounge"></option>
+                                                    <option value="Laiko"></option>
+                                                    <option value="Luk thung"></option>
+                                                    <option value="Morna"></option>
+                                                    <option value="Makossa"></option>
+                                                    <option value="Mandopop"></option>
+                                                    <option value="Morlam"></option>
+                                                    <option value="Mambo"></option>
+                                                    <option value="Merengue"></option>
+                                                    <option value="Metal"></option>
+                                                    <option value="MPB"></option>
+                                                    <option value="Maracatu"></option>
+                                                    <option value="Marcha"></option>
+                                                    <option value="Mariachi"></option>
+                                                    <option value="Marimba"></option>
+                                                    <option value="Mejorana"></option>
+                                                    <option value="Musette"></option>
+                                                    <option value="New Age"></option>
+                                                    <option value="New Wake"></option>
+                                                    <option value="Neo Folk"></option>
+                                                    <option value="Norteño"></option>
+                                                    <option value="Nep-hop"></option>
+                                                    <option value="Nongaki"></option>
+                                                    <option value="Ópera"></option>
+                                                    <option value="Onda Etérea"></option>
+                                                    <option value="Pop"></option>
+                                                    <option value="Pop Rock"></option>
+                                                    <option value="P-pop"></option>
+                                                    <option value="Pop Indiano"></option>
+                                                    <option value="Punta Rock"></option>
+                                                    <option value="Piano Rock"></option>
+                                                    <option value="Pagode"></option>
+                                                    <option value="Punk"></option>
+                                                    <option value="Pós-punk"></option>
+                                                    <option value="Post-rock"></option>
+                                                    <option value="Progressivo"></option>
+                                                    <option value="Psicodelia"></option>
+                                                    <option value="Punk Rock"></option>
+                                                    <option value="Pasillo"></option>
+                                                    <option value="Pasacall"></option>
+                                                    <option value="Post-britpop"></option>
+                                                    <option value="Punjabi"></option>
+                                                    <option value="Pansori"></option>
+                                                    <option value="Plena"></option>
+                                                    <option value="Progg"></option>
+                                                    <option value="Rumba"></option>
+                                                    <option value="Ragini"></option>
+                                                    <option value="R&B"></option>
+                                                    <option value="Rap"></option>
+                                                    <option value="Reggae"></option>
+                                                    <option value="Reggaeton"></option>
+                                                    <option value="Regional"></option>
+                                                    <option value="Rock"></option>
+                                                    <option value="Rock Alternativo"></option>
+                                                    <option value="Rock Nacional"></option>
+                                                    <option value="Rockability"></option>
+                                                    <option value="Romântico"></option>
+                                                    <option value="Ratna Music"></option>
+                                                    <option value="Ranchera"></option>
+                                                    <option value="Samba"></option>
+                                                    <option value="Samba Enredo"></option>
+                                                    <option value="Semba"></option>
+                                                    <option value="Sertanejo"></option>
+                                                    <option value="Ska"></option>
+                                                    <option value="Soft Rock"></option>
+                                                    <option value="Soul Music"></option>
+                                                    <option value="Swing"></option>
+                                                    <option value="Salsa"></option>
+                                                    <option value="Surf Pop"></option>
+                                                    <option value="Sacra"></option>
+                                                    <option value="Samples"></option>
+                                                    <option value="Sami Music"></option>
+                                                    <option value="Sherpa"></option>
+                                                    <option value="Saloma"></option>
+                                                    <option value="Soca Sanjo"></option>
+                                                    <option value="Sufi"></option>
+                                                    <option value="Sevdalinka"></option>
+                                                    <option value="Tecno"></option>
+                                                    <option value="Tecno Pop"></option>
+                                                    <option value="Trance"></option>
+                                                    <option value="Trap"></option>
+                                                    <option value="Trilha Sonora"></option>
+                                                    <option value="Trip-hop"></option>
+                                                    <option value="Tropical House"></option>
+                                                    <option value="Tango Tarantela"></option>
+                                                    <option value="Tamborito"></option>
+                                                    <option value="Tex-mex"></option>
+                                                    <option value="Tezeta"></option>
+                                                    <option value="Trot Tamburica"></option>
+                                                    <option value="Taarab"></option>
+                                                    <option value="Trip hop"></option>
+                                                    <option value="Urban Pasifika"></option>
+                                                    <option value="V-pop"></option>
+                                                    <option value="Vanerão"></option>
+                                                    <option value="Velha Guarda"></option>
+                                                    <option value="Vaporwave"></option>
+                                                    <option value="Valsa"></option>
+                                                    <option value="Vallenato"></option>
+                                                    <option value="World Music"></option>
+                                                    <option value="World Beat Wadaiko"></option>
+                                                    <option value="Western"></option>
+                                                    <option value="Xöömii"></option>
+                                                    <option value="Yarabi"></option>
+                                                    <option value="Yéyé"></option>
+                                                    <option value="Zouglou"></option>
+                                                    <option value="Zarzuela"></option>
+                                                    <option value="Zouk"></option>
+                                                </optgroup>
+                                            </select>
+                                        </datalist>
+                                    </div>
+                                </div>
+
+                                <div class="form-floating" style="width: 100%; color: white;"
+                                    onclick="fechar_info_input()">
+                                    <input type="text" id="idioma_album" class="form-control"
+                                        name="tipo_de_solicitacao_web" required placeholder="Insira o nome do album"
+                                        list="web3" style="margin-bottom: 20px;" oninput="mostrarPreview5()">
+                                    <!---------------INPUT - ALTERAR O NAME ---------------->
+                                    <label for="">Idioma do álbum</label>
+
+                                    <datalist id="web3">
+                                        <select name="album3" id="web3">
+                                            <optgroup label="Selecione o nome album">
+                                                <option value="Português"></option>
+                                                <option value="Inglês"></option>
+                                                <option value="Francês"></option>
+                                                <option value="Espanhol"></option>
+                                            </optgroup>
+                                        </select>
+                                    </datalist>
+                                </div>
+
+                                <div class="input_gruop" style="margin-bottom: 20px;">
+                                    <div class="form-floating" style="width: 100%; color: white;">
+                                        <input type="date" name="" id="data_lancamento_album" class="form-control"
+                                            style="color: white;" required oninput="mostrarPreviewData()">
+                                        <!---------------INPUT - ALTERAR O NAME ---------------->
+                                        <label for="">Ano de Lançamento</label>
+                                    </div>
+
+                                    <div class="form-floating" style="width: 100%; color: white;">
+                                        <input type="date" name="" id="data_gravacao_album" class="form-control"
+                                            style="color: white;" required oninput="mostrarPreviewData2()">
+                                        <!---------------INPUT - ALTERAR O NAME ---------------->
+                                        <label for="">Ano de gravação</label>
+                                    </div>
+                                </div>
+                                <!---------------NAO ALTERAR NESTA AREA - INICIO ---------------->
+                                <div style="width: 100%; display: flex; gap: 10px;">
+                                    <button type="button" class="btn"
+                                        style="background-color: #c71585; color: white; width: 100%;"
+                                        onclick="voltar_containerAlbuns()">
+
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
+                                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                                        </svg>
+                                        Cancelar</button>
+                                    <button type="button" class="btn"
+                                        style="background-color: #c71585; color: white;  width: 100%;"
+                                        onclick="open_addAlbum2()">
+                                        Avançar
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="feather feather-arrow-right">
+                                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                                            <polyline points="12 5 19 12 12 19"></polyline>
+                                        </svg></button>
+                                </div>
+                                <!---------------NAO ALTERAR NESTA AREA - FIM ---------------->
+
+                            </div>
+
+                            <div id="criarAlbum_2">
+                                <h4 style="text-align: center; margin-bottom: 20px;">Gerarando um Álbum/Música - 2º
+                                    Passo
+                                </h4>
+
+
+                                <div class="input_gruop" style="margin-bottom: 20px;" onclick="fechar_info_input4()">
+                                    <div class="form-floating" style="width: 100%; color: white;">
+                                        <input type="text" class="form-control" id="nome_faixa"
+                                            placeholder="nome@email.com" required autocomplete="name" name="nome"
+                                            onclick="fechar_info_input2()" oninput="mostrarPreview6()">
+                                        <!---------------INPUT - ALTERAR O NAME ---------------->
+                                        <label for="">Título da musica (Máximo de 200 caracteres)</label>
+                                    </div>
+
+                                    <div class="form-floating" style="width: 100%; color: white;"
+                                        onclick="fechar_info_input4()">
+                                        <input type="text" class="form-control" id="nome_artiste_faixa"
+                                            placeholder="nome@email.com" required autocomplete="name" name=""
+                                            onclick="fechar_info_input2()" oninput="mostrarPreview7()">
+                                        <!---------------INPUT - ALTERAR O NAME ---------------->
+                                        <label for="">Artista do álbum </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-floating" style="width: 100%; color: white; margin-bottom: 20px;">
+                                    <input type="text" class="form-control" id="nome_participanta_faixa"
+                                        placeholder="nome@email.com" required autocomplete="name" name=""
+                                        onclick="info_input2()" oninput="mostrarPreview8()">
+                                    <!---------------INPUT - ALTERAR O NAME ---------------->
+                                    <label for="">Artista Participante</label>
+                                    <div id="artist_info2" class="alert alert-info" style="flex-direction: column;">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-arrow-up">
+                                                <line x1="12" y1="19" x2="12" y2="5"></line>
+                                                <polyline points="5 12 12 5 19 12"></polyline>
+                                            </svg>
+                                        </div>
+                                        Os Artista Participantes devem ser os nomes no documento de identificação do
+                                        artista em seu
+                                        país.
+                                        <br>Primeiro e ultimo - nome.
+                                    </div>
+                                </div>
+
+                                <div class="form-floating" style="width: 100%; color: white;"
+                                    onclick="fechar_info_input2()">
+                                    <input type="text" class="form-control" id="compositor_artiste_faixa"
+                                        placeholder="nome@email.com" required autocomplete="name" name=""
+                                        onclick="info_input4()" style="margin-bottom: 20px;"
+                                        oninput="mostrarPreview9()">
+                                    <!---------------INPUT - ALTERAR O NAME ---------------->
+                                    <label for="">Compositore(s)</label>
+                                    <div id="artist_info4" class="alert alert-info" style="flex-direction: column;">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-arrow-up">
+                                                <line x1="12" y1="19" x2="12" y2="5"></line>
+                                                <polyline points="5 12 12 5 19 12"></polyline>
+                                            </svg>
+                                        </div>
+                                        Adiciona aqui o(s) Compositor(es) deste álbum, em caso de ser uma calaboração
+                                        adicione os dois artistas aqui.
+                                        <br>
+                                        EX: Compositor ou Compositor 1, Compositor 2.../
+                                        Primeiro e ultimo - nome.
+                                    </div>
+                                </div>
+
+                                <div class="form-floating" style="width: 100%; color: white;">
+                                    <input type="text" class="form-control" id="produtor_artiste_faixa"
+                                        placeholder="nome@email.com" required autocomplete="name" name=""
+                                        onclick="info_input5()" style="margin-bottom: 20px;"
+                                        oninput="mostrarPreview10()">
+                                    <!---------------INPUT - ALTERAR O NAME ---------------->
+                                    <label for="">Produtor(es)</label>
+                                    <div id="artist_info5" class="alert alert-info" style="flex-direction: column;">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-arrow-up">
+                                                <line x1="12" y1="19" x2="12" y2="5"></line>
+                                                <polyline points="5 12 12 5 19 12"></polyline>
+                                            </svg>
+                                        </div>
+                                        Adiciona aqui o(s) Produtor(es) deste álbum, em caso de ser uma calaboração
+                                        adicione os dois artistas aqui.
+                                        <br>
+                                        EX: Produtor ou Produtor 1, Produtor 2.../
+                                        Primeiro e ultimo - nome.
+                                    </div>
+                                </div>
+
+                                <div class="form-floating" style="width: 100%; color: white;"
+                                    onclick="fechar_info_input4()">
+
+                                    <input type="text" id="idioma_faixa" class="form-control" name="" required
+                                        placeholder="Insira o nome do album" list="web5" style="margin-bottom: 20px;"
+                                        onclick="fechar_info_input4()" oninput="mostrarPreview11()">
+                                    <!---------------INPUT - ALTERAR O NAME ---------------->
+                                    <label for="">Idioma</label>
+                                    <datalist id="web5">
+                                        <select name="album" id="web5">
+                                            <optgroup label="Selecione o nome album">
+                                                <option value="Português"></option>
+                                                <option value="Inglês"></option>
+                                                <option value="Francês"></option>
+                                                <option value="Espanhol"></option>
+                                            </optgroup>
+                                        </select>
+                                    </datalist>
+                                </div>
+
+                                <div class="form-floating" style="width: 100%; color: white;"
+                                    onclick="fechar_info_input4()">
+
+                                    <input type="text" id="explicito_faixa" class="form-control"
+                                        name="tipo_de_solicitacao_web" required placeholder="Insira o nome do album"
+                                        list="web6" style="margin-bottom: 20px;" onclick="fechar_info_input2()"
+                                        oninput="mostrarPreview12()">
+                                    <!---------------INPUT - ALTERAR O NAME ---------------->
+                                    <label for="">Explicito</label>
+
+                                    <datalist id="web6">
+                                        <select name="album" id="web6">
+                                            <optgroup label="Selecione o nome album">
+                                                <option value="Sim"></option>
+                                                <option value="Não"></option>
+                                            </optgroup>
+                                        </select>
+                                    </datalist>
+                                </div>
+
+                                <div style="width: 100%; color: white; margin-bottom: 20px;"
+                                    onclick="fechar_info_input4()">
+                                    <label for="" style="margin-bottom: 8px;">Subir Música</label>
+
+                                    <input class="form-control" type="file" class="arquivo-audio" accept="audio/*"
+                                        id="musica" required autocomplete="off" name="nome"
+                                        onclick="fechar_info_input2()" onchange="mostrarPreviewAudio()">
+                                    <!---------------INPUT - ALTERAR O NAME ---------------->
+                                </div>
+
+                                <!---------------NÃO ALTERAR ESTA ÁREA - INICIO--------------->
+                                <div style="width: 100%; display: flex; gap: 10px;">
+                                    <button type="button" class="btn"
+                                        style="background-color: #c71585; color: white; width: 100%;"
+                                        onclick="voltar_aadAlbum2()">
+
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="feather feather-arrow-left">
+                                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                                            <polyline points="12 19 5 12 12 5"></polyline>
+                                        </svg>
+                                        Voltar</button>
+                                    <button type="button" class="btn"
+                                        style="background-color: #c71585; color: white;  width: 100%;"
+                                        onclick="open_addAlbum_3()"> Avançar
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="feather feather-arrow-right">
+                                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                                            <polyline points="12 5 19 12 12 19"></polyline>
+                                        </svg></button>
+                                </div>
+                                <!---------------NÃO ALTERAR ESTA ÁREA - FIM--------------->
+                            </div>
+
+                            <div id="criarAlbum_3">
+                                <h4 style="text-align: center; margin-bottom: 20px;">Gerarando um Álbum - 3º Passo</h4>
+                                <div class="form-floating" style="width: 100%; color: white;">
+
+                                    <input type="file" id="input-image" class="form-control"
+                                        accept="image/png, image/jpeg" required>
+                                    <!---------------INPUT - ALTERAR O NAME ---------------->
+                                    <label for="">Imagem da Capa do Álbum</label>
+                                    <div style="display: flex; flex-direction: column; align-items: center;">
+                                        <img id="preview-image" src="" class="img-fluid">
+                                        <span id="error-message"></span>
+                                    </div>
+                                    <p>Detalhes da Imagem do álbum: <br>
+                                        º A imagem deve ter 400px/400px <br>
+                                        º A imagem deve estar no formato PNG ou JPG <br>
+                                        º A imagem não pode conter icones de plataformas e empresas a fim de publicidade
+                                    </p>
+                                </div>
+                                <div style="width: 100%; display: flex; gap: 10px;">
+                                    <!---------------NAO ALTERAR NESTA AREA - INICIO ---------------->
+                                    <button type="button" class="btn"
+                                        style="background-color: #c71585; color: white; width: 100%;"
+                                        onclick="voltar_aadAlbum_2()">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="feather feather-arrow-left">
+                                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                                            <polyline points="12 19 5 12 12 5"></polyline>
+                                        </svg>
+                                        Voltar</button>
+
+                                    <button type="button" class="btn"
+                                        style="background-color: #c71585; color: white;  width: 100%;"
+                                        onclick="open_addAlbum_4()">Avançar
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="feather feather-arrow-right">
+                                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                                            <polyline points="12 5 19 12 12 19"></polyline>
+                                        </svg></button>
+                                    <!---------------NAO ALTERAR NESTA AREA - FIM ---------------->
+                                </div>
+                            </div>
+
+                            <div id="criarAlbum_4">
+                                <h4 style="text-align: center; margin-bottom: 20px;">Gerarando um Álbum/música - 4º
+                                    Passo</h4>
+                                <div class="form-floating" style="width: 100%; color: white;"
+                                    onclick="fechar_info_input3()">
+                                    <input type="date" class="form-control" id="nome_faixa" placeholder="nome@email.com"
+                                        required autocomplete="bday" name="nome" style="margin-bottom: 20px;">
+                                    <!---------------INPUT - ALTERAR O NAME ---------------->
+                                    <label for="">Data de lançamento</label>
+                                </div>
+
+                                <div class="form-floating" style="width: 100%; color: white;">
+                                    <input type="date" class="form-control" id="data_local" placeholder="nome@email.com"
+                                        required autocomplete="bday" name="nome" onclick="info_input3()">
+                                    <!---------------INPUT - ALTERAR O NAME ---------------->
+                                    <label for="">Data original</label>
+                                    <div id="artist_info3" class="alert alert-info" style="flex-direction: column;">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-arrow-up">
+                                                <line x1="12" y1="19" x2="12" y2="5"></line>
+                                                <polyline points="5 12 12 5 19 12"></polyline>
+                                            </svg>
+                                        </div>
+                                        Em caso deste álbum já ter sido lançado antes adicione a data que foi lançado,
+                                        em caso de
+                                        ser a primeira
+                                        vez adicione a data de lançamento.
+                                    </div>
+                                    <hr>
+                                    <div class="hgrupo">
+                                        <h5 style="text-align: center; margin-top: 20px;">Selecione as principais lojas
+                                        </h5>
+                                        <label for="checkbox-principal">
+                                            <div style="display: flex; align-items: center;">
+                                                <div
+                                                    style="display: flex; flex-direction: row; justify-content: center; gap: 10px;">
+                                                    <h6>Selecionar todas</h6>
+                                                    <input type="checkbox" name="" id="checkbox-principal" class=""
+                                                        style="box-shadow: inset 0 0 20px transparent; margin-bottom: 3px;">
+                                                </div>
+                                            </div>
+                                        </label>
+                                        <div onclick="fechar_info_input3()"
+                                            style="display: flex; justify-content: center; width: 100%;">
+
+                                            <div class="container_lojas">
+                                                <div>
+                                                    <label for="loja_1">
+                                                        <div
+                                                            style="display: flex; flex-direction: column; text-align: left; flex-wrap: wrap; row-gap: 1px;">
+                                                            <div
+                                                                style="display: flex; flex-direction: row; column-gap: 25px;  align-items: center;">
+                                                                <img src="../imgs/Apple Music.png" alt=""
+                                                                    class="img-fluid">
+                                                                <input type="checkbox" name=""
+                                                                    class="transition_checkbox checkbox-secundario"
+                                                                    id="loja_1"
+                                                                    style="box-shadow: inset 0 0 20px transparent;">
+                                                            </div>
+                                                            <p>Apple Music</p>
+                                                        </div>
+                                                    </label>
+                                                </div>
+
+                                                <div>
+                                                    <label for="loja_2">
+                                                        <div
+                                                            style="display: flex; flex-direction: column; text-align: left; flex-wrap: wrap; row-gap: 1px;">
+                                                            <div
+                                                                style="display: flex; flex-direction: row; column-gap: 25px;  align-items: center;">
+                                                                <img src="../imgs/Boomplay.png" alt=""
+                                                                    class="img-fluid">
+                                                                <input type="checkbox" name=""
+                                                                    class="transition_checkbox checkbox-secundario"
+                                                                    id="loja_2"
+                                                                    style="box-shadow: inset 0 0 20px transparent;">
+                                                            </div>
+                                                            <p>Bomplay</p>
+                                                        </div>
+                                                    </label>
+                                                </div>
+
+                                                <div>
+                                                    <label for="loja_3">
+                                                        <div
+                                                            style="display: flex; flex-direction: column; text-align: left; flex-wrap: wrap; row-gap: 1px;">
+                                                            <div
+                                                                style="display: flex; flex-direction: row; column-gap: 25px;  align-items: center;">
+                                                                <img src="../imgs/Claro Music.png" alt=""
+                                                                    class="img-fluid">
+                                                                <input type="checkbox" name=""
+                                                                    class="transition_checkbox checkbox-secundario"
+                                                                    id="loja_3"
+                                                                    style="box-shadow: inset 0 0 20px transparent;">
+                                                            </div>
+                                                            <p>Claro Music</p>
+                                                        </div>
+                                                    </label>
+                                                </div>
+
+                                                <div>
+                                                    <label for="loja_4">
+                                                        <div
+                                                            style="display: flex; flex-direction: column; text-align: left; flex-wrap: wrap; row-gap: 1px;">
+                                                            <div
+                                                                style="display: flex; flex-direction: row; column-gap: 25px;  align-items: center;">
+                                                                <img src="../imgs/deezer.png" alt="" class="img-fluid">
+                                                                <input type="checkbox" name=""
+                                                                    class="transition_checkbox checkbox-secundario"
+                                                                    id="loja_4"
+                                                                    style="box-shadow: inset 0 0 20px transparent;">
+                                                            </div>
+                                                            <p>Deezer</p>
+                                                        </div>
+                                                    </label>
+                                                </div>
+
+                                                <div>
+                                                    <label for="loja_5">
+                                                        <div
+                                                            style="display: flex; flex-direction: column; text-align: left; flex-wrap: wrap; row-gap: 1px;">
+                                                            <div
+                                                                style="display: flex; flex-direction: row; column-gap: 25px;  align-items: center;">
+                                                                <img src="../imgs/iTunes.png" alt="" class="img-fluid">
+                                                                <input type="checkbox" name=""
+                                                                    class="transition_checkbox checkbox-secundario"
+                                                                    id="loja_5"
+                                                                    style="box-shadow: inset 0 0 20px transparent;">
+                                                            </div>
+                                                            <p>iTunes</p>
+                                                        </div>
+                                                    </label>
+                                                </div>
+
+                                                <div>
+                                                    <label for="loja_6">
+                                                        <div
+                                                            style="display: flex; flex-direction: column; text-align: left; flex-wrap: wrap; row-gap: 1px;">
+                                                            <div
+                                                                style="display: flex; flex-direction: row; column-gap: 25px;  align-items: center;">
+                                                                <img src="../imgs/pandora.png" alt="" class="img-fluid">
+                                                                <input type="checkbox" name=""
+                                                                    class="transition_checkbox checkbox-secundario"
+                                                                    id="loja_6"
+                                                                    style="box-shadow: inset 0 0 20px transparent;">
+                                                            </div>
+                                                            <p>Pandora</p>
+                                                        </div>
+                                                    </label>
+                                                </div>
+
+                                                <div>
+                                                    <label for="loja_7">
+                                                        <div
+                                                            style="display: flex; flex-direction: column; text-align: left; flex-wrap: wrap; row-gap: 1px;">
+                                                            <div
+                                                                style="display: flex; flex-direction: row; column-gap: 25px;  align-items: center;">
+                                                                <img src="../imgs/Resso.png" alt="" class="img-fluid">
+                                                                <input type="checkbox" name=""
+                                                                    class="transition_checkbox checkbox-secundario"
+                                                                    id="loja_7"
+                                                                    style="box-shadow: inset 0 0 20px transparent;">
+                                                            </div>
+                                                            <p>Resso</p>
+                                                        </div>
+                                                    </label>
+                                                </div>
+
+                                                <div>
+                                                    <label for="loja_8">
+                                                        <div
+                                                            style="display: flex; flex-direction: column; text-align: left; flex-wrap: wrap; row-gap: 1px;">
+                                                            <div
+                                                                style="display: flex; flex-direction: row; column-gap: 25px;  align-items: center;">
+                                                                <img src="../imgs/Snapchat.png" alt=""
+                                                                    class="img-fluid">
+                                                                <input type="checkbox" name=""
+                                                                    class="transition_checkbox checkbox-secundario"
+                                                                    id="loja_8"
+                                                                    style="box-shadow: inset 0 0 20px transparent;">
+                                                            </div>
+                                                            <p>Snapchat</p>
+                                                        </div>
+                                                    </label>
+                                                </div>
+
+                                                <div>
+                                                    <label for="loja_9">
+                                                        <div
+                                                            style="display: flex; flex-direction: column; text-align: left; flex-wrap: wrap; row-gap: 1px;">
+                                                            <div
+                                                                style="display: flex; flex-direction: row; column-gap: 25px;  align-items: center;">
+                                                                <img src="../imgs/Spotify.png" alt="" class="img-fluid">
+                                                                <input type="checkbox" name=""
+                                                                    class="transition_checkbox checkbox-secundario"
+                                                                    id="loja_9"
+                                                                    style="box-shadow: inset 0 0 20px transparent;">
+                                                            </div>
+                                                            <p>Spotify</p>
+                                                        </div>
+                                                    </label>
+                                                </div>
+
+                                                <div>
+                                                    <label for="loja_10">
+                                                        <div
+                                                            style="display: flex; flex-direction: column; text-align: left; flex-wrap: wrap; row-gap: 1px;">
+                                                            <div
+                                                                style="display: flex; flex-direction: row; column-gap: 25px;  align-items: center;">
+                                                                <img src="../imgs/Tik Tok.png" alt="" class="img-fluid">
+                                                                <input type="checkbox" name=""
+                                                                    class="transition_checkbox checkbox-secundario"
+                                                                    id="loja_10"
+                                                                    style="box-shadow: inset 0 0 20px transparent;">
+                                                            </div>
+                                                            <p>Tik Tok</p>
+                                                        </div>
+                                                    </label>
+                                                </div>
+
+                                                <div>
+                                                    <label for="loja_11">
+                                                        <div
+                                                            style="display: flex; flex-direction: column; text-align: left; flex-wrap: wrap; row-gap: 1px;">
+                                                            <div
+                                                                style="display: flex; flex-direction: row; column-gap: 25px;  align-items: center;">
+                                                                <img src="../imgs/YouTube Music.png" alt=""
+                                                                    class="img-fluid">
+                                                                <input type="checkbox" name=""
+                                                                    class="transition_checkbox checkbox-secundario"
+                                                                    id="loja_11"
+                                                                    style="box-shadow: inset 0 0 20px transparent;">
+                                                            </div>
+                                                            <p>YouTube Music</p>
+                                                        </div>
+                                                    </label>
+                                                </div>
+
+                                                <div>
+                                                    <label for="loja_12">
+                                                        <div
+                                                            style="display: flex; flex-direction: column; text-align: left; flex-wrap: wrap; row-gap: 1px;">
+                                                            <div
+                                                                style="display: flex; flex-direction: row; column-gap: 25px;  align-items: center;">
+                                                                <img src="../imgs/tidal.png" alt="" class="img-fluid">
+                                                                <input type="checkbox" name=""
+                                                                    class="transition_checkbox checkbox-secundario"
+                                                                    id="loja_12"
+                                                                    style="box-shadow: inset 0 0 20px transparent;">
+                                                            </div>
+                                                            <p>Tidal</p>
+                                                        </div>
+                                                    </label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div style="width: 100%; display: flex; gap: 10px; margin-top: 30px;">
+                                            <button type="button" class="btn"
+                                                style="background-color: #c71585; color: white; width: 100%;"
+                                                onclick="voltar_aadAlbum_3() ">
+
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-arrow-left">
+                                                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                                                    <polyline points="12 19 5 12 12 5"></polyline>
+                                                </svg>
+                                                Voltar</button>
+
+                                            <!---------------ENVIAR DADOS DA FAIXA PARA BASE DE DADOS - INICIO--------------->
+                                            <button type="button" class="btn"
+                                                style="background-color: #c71585; color: white;  width: 100%;" onclick="open_pre_visualizacao()">Avançar
+
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-arrow-right">
+                                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                                </svg></button>
+                                        </div>
+                                        <!---------------ENVIAR DADOS DA FAIXA PARA BASE DE DADOS - FIM--------------->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="preview_dados">
+                                <div>
+                                    <h4 style="text-align: center;">Dados do Álbum Criado</h4>
+                                    <div class="input_gruop2">
+                                        <div class="form-floating" style="width: 100%; color: white;">
+                                            <span>Título do álbum, single ou EP</span>
+                                            <div class="form-control input" id="ver_dado"></div>
+                                        </div>
+            
+                                        <div class="form-floating" style="width: 100%; color: white;">
+                                            <span>Artista ou banda/grupo</span>
+                                            <div class="form-control input" id="ver_dado2"></div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="input_gruop2">
+                                        <div class="form-floating" style="width: 100%; color: white;">
+                                            <span>Gênero principal</span>
+                                            <div class="form-control input" id="ver_dado3"></div>
+                                        </div>
+            
+                                        <div class="form-floating" style="width: 100%; color: white;">
+                                            <span>Gênero Secundário</span>
+                                            <div class="form-control input" id="ver_dado4"></div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="form-floating" style="width: 100%; color: white;">
+                                        <span>Idioma do álbum</span>
+                                        <div class="form-control input" id="ver_dado5"></div>
+                                    </div>
+            
+                                    <div class="input_gruop2">
+                                        <div class="form-floating" style="width: 100%; color: white;">
+                                            <span>Ano de Lançamento</span>
+                                            <div class="form-control input" id="ver_dado6"></div>
+                                        </div>
+            
+                                        <div class="form-floating" style="width: 100%; color: white;">
+                                            <span>Ano de gravação</span>
+                                            <div class="form-control input" id="ver_dado7"></div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn" style="background-color: #c71585; color: white; width: 100%;"
+                                        onclick="open_addAlbum()">Editar dados</button>
+                                </div>
+            
+                                <hr>
+            
+                                <style>
+                                    #ver_dado15 audio {
+                                        width: 100%;
+                                        height: 50px;
+                                    }
+                                </style>
+                                <div>
+                                    <h4 style="text-align: center;">Dados da Música Inserida</h4>
+                                    <div class="input_gruop2">
+                                        <div class="form-floating" style="width: 100%; color: white;">
+                                            <span>Título da música</span>
+                                            <div class="form-control input" id="ver_dado8"></div>
+                                        </div>
+            
+                                        <div class="form-floating" style="width: 100%; color: white;">
+                                            <span>Artista do Álbum</span>
+                                            <div class="form-control input" id="ver_dado9"></div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="form-floating" style="width: 100%; color: white;">
+                                        <span>Artista Participante</span>
+                                        <div class="form-control input" id="ver_dado10"></div>
+                                    </div>
+            
+                                    <div class="form-floating" style="width: 100%; color: white;">
+                                        <span>Compositor(es)</span>
+                                        <div class="form-control input" id="ver_dado11"></div>
+                                    </div>
+            
+                                    <div class="form-floating" style="width: 100%; color: white;">
+                                        <span>Produtor(es)</span>
+                                        <div class="form-control input" id="ver_dado12"></div>
+                                    </div>
+            
+                                    <div class="form-floating" style="width: 100%; color: white;">
+                                        <span>Idioma</span>
+                                        <div class="form-control input" id="ver_dado13"></div>
+                                    </div>
+            
+                                    <div class="form-floating" style="width: 100%; color: white;">
+                                        <span>Explicito</span>
+                                        <div class="form-control input" id="ver_dado14"></div>
+                                    </div>
+            
+                                    <div class="form-floating" style="width: 100%; color: white;">
+                                        <span>Música Selecionada</span>
+                                        <div class="" id="ver_dado15"></div>
+                                    </div>
+                                    <button type="button" class="btn" style="background-color: #c71585; color: white; width: 100%;"
+                                        onclick="open_add_music()">Editar dados</button>
+                                    <hr>
+            
+                                    <button type="submit" class="btn"
+                                        style="background-color: #c71585; color: white; width: 100%;">Criar Álbum</button>
+            
+                                </div>
+            
+                            </div>
+                    </div>
+                </div>
+                </form>
+              
+        </div>
+        </div>
+        <!---------------FIM DO ALBUM (LOOP)---------------->
+    </main>
+    </div>
+    </main>
+    <!---------------FIM DO BACKEND---------------->
+</body>
+
+<script>
+    function mostrarPreview() {
+        const textoInput = document.getElementById('nome_albun');
+        const previewArea = document.getElementById('ver_dado');
+        previewArea.textContent = textoInput.value;
+    }
+
+    function mostrarPreview2() {
+        const textoInput2 = document.getElementById('nome_artiste_album');
+        const previewArea2 = document.getElementById('ver_dado2');
+
+        previewArea2.textContent = textoInput2.value;
+    }
+
+    function mostrarPreview3() {
+        const textoInput3 = document.getElementById('genero_1_album');
+        const previewArea3 = document.getElementById('ver_dado3');
+
+        previewArea3.textContent = textoInput3.value;
+    }
+
+    function mostrarPreview4() {
+        const textoInput4 = document.getElementById('genero_2_album');
+        const previewArea4 = document.getElementById('ver_dado4');
+
+        previewArea4.textContent = textoInput4.value;
+    }
+
+    function mostrarPreview5() {
+        const textoInput5 = document.getElementById('idioma_album');
+        const previewArea5 = document.getElementById('ver_dado5');
+
+        previewArea5.textContent = textoInput5.value;
+    }
+
+
+    function mostrarPreviewData() {
+        const dataInput = document.getElementById('data_lancamento_album');
+        const datePreview = document.getElementById('ver_dado6');
+
+        const data = new Date(dataInput.value);
+
+        if (!isNaN(data.getTime())) {
+            const dataFormatada = data.toLocaleDateString('pt-BR');
+            datePreview.textContent = dataFormatada;
+        } else {
+            datePreview.textContent = 'Data inválida';
+        }
+    }
+
+    function mostrarPreviewData2() {
+        const dataInput2 = document.getElementById('data_gravacao_album');
+        const datePreview2 = document.getElementById('ver_dado7');
+
+        const data2 = new Date(dataInput2.value);
+
+        if (!isNaN(data2.getTime())) {
+            const dataFormatada2 = data2.toLocaleDateString('pt-BR');
+            datePreview2.textContent = dataFormatada2;
+        } else {
+            datePreview2.textContent = 'Data inválida';
+        }
+    }
+
+</script>
+
+<script>
+    function mostrarPreview6() {
+        const textoInput6 = document.getElementById('nome_faixa');
+        const previewArea6 = document.getElementById('ver_dado8');
+
+        previewArea6.textContent = textoInput6.value;
+    }
+
+    function mostrarPreview7() {
+        const textoInput7 = document.getElementById('nome_artiste_faixa');
+        const previewArea7 = document.getElementById('ver_dado9');
+
+        previewArea7.textContent = textoInput7.value;
+    }
+
+    function mostrarPreview8() {
+        const textoInput8 = document.getElementById('nome_participanta_faixa');
+        const previewArea8 = document.getElementById('ver_dado10');
+
+        previewArea8.textContent = textoInput8.value;
+    }
+
+    function mostrarPreview9() {
+        const textoInput9 = document.getElementById('compositor_artiste_faixa');
+        const previewArea9 = document.getElementById('ver_dado11');
+
+        previewArea9.textContent = textoInput9.value;
+    }
+
+    function mostrarPreview10() {
+        const textoInput10 = document.getElementById('produtor_artiste_faixa');
+        const previewArea10 = document.getElementById('ver_dado12');
+
+        previewArea10.textContent = textoInput10.value;
+    }
+
+    function mostrarPreview11() {
+        const textoInput11 = document.getElementById('idioma_faixa');
+        const previewArea11 = document.getElementById('ver_dado13');
+
+        previewArea11.textContent = textoInput11.value;
+    }
+
+    function mostrarPreview12() {
+        const textoInput12 = document.getElementById('explicito_faixa');
+        const previewArea12 = document.getElementById('ver_dado14');
+
+        previewArea12.textContent = textoInput12.value;
+    }
+
+    function mostrarPreviewAudio() {
+        const audioInput = document.getElementById('musica');
+        const audioPreview = document.getElementById('ver_dado15');
+
+        if (audioInput.files && audioInput.files[0]) {
+            const file = audioInput.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                const audioElement = document.createElement('audio');
+                audioElement.src = e.target.result;
+                audioElement.controls = true;
+
+                audioPreview.innerHTML = ''; // Limpa a visualização anterior
+                audioPreview.appendChild(audioElement);
+            };
+
+            reader.readAsDataURL(file);
+        }
+    }
+</script>
+
+<script>
+    const checkboxPrincipal = document.getElementById('checkbox-principal');
+    const checkboxesSecundarios = document.querySelectorAll('.checkbox-secundario');
+
+    checkboxPrincipal.addEventListener('click', function () {
+        const estadoPrincipal = checkboxPrincipal.checked;
+
+        checkboxesSecundarios.forEach(checkbox => {
+            checkbox.checked = estadoPrincipal;
+        });
+    });
+</script>
+
+<script>
+    const playlist = document.getElementById('playlist');
+    const nowPlayingDiv = document.getElementById('nowPlaying');
+    const songTitleP = document.getElementById('songTitle');
+    const playButton = document.getElementById('playButton');
+    const pauseButton = document.getElementById('pauseButton');
+    const previousButton = document.getElementById('previousButton');
+    const nextButton = document.getElementById('nextButton');
+    const shuffleButton = document.getElementById('shuffleButton');
+    let currentSongIndex = 0;
+    let isShuffled = false;
+
+    function updateNowPlayingInfo() {
+        const currentSong = playlist.querySelectorAll('audio')[currentSongIndex];
+        const songTitle = currentSong.dataset.title || currentSong.src.split('/').pop().split('.')[0];
+        songTitleP.textContent = songTitle;
+    }
+
+    playButton.addEventListener('click', () => {
+        const allSongs = playlist.querySelectorAll('audio');
+        allSongs[currentSongIndex].play();
+        updateNowPlayingInfo();
+    });
+
+    pauseButton.addEventListener('click', () => {
+        const allSongs = playlist.querySelectorAll('audio');
+        for (const song of allSongs) {
+            song.pause();
+        }
+    });
+
+    previousButton.addEventListener('click', () => {
+        const allSongs = playlist.querySelectorAll('audio');
+        const previousSongIndex = (currentSongIndex - 1 + allSongs.length) % allSongs.length;
+
+        allSongs[currentSongIndex].pause();
+        allSongs[previousSongIndex].play();
+        currentSongIndex = previousSongIndex;
+        updateNowPlayingInfo();
+    });
+
+    nextButton.addEventListener('click', playNextSong);
+
+    shuffleButton.addEventListener('click', () => {
+        isShuffled = !isShuffled;
+        shuffleButton.textContent = isShuffled ? 'Desativar Aleatório' : 'Ativar Aleatório';
+    });
+
+    for (const song of playlist.querySelectorAll('audio')) {
+        song.addEventListener('playing', () => {
+            currentSongIndex = playlist.querySelectorAll('audio').indexOf(song);
+            updateNowPlayingInfo();
+        });
+
+        song.addEventListener('ended', () => {
+            playNextSong();
+        });
+    }
+
+    function playNextSong() {
+        let nextSongIndex;
+        if (isShuffled) {
+            do {
+                nextSongIndex = Math.floor(Math.random() * playlist.querySelectorAll('audio').length);
+            } while (nextSongIndex === currentSongIndex);
+        } else {
+            nextSongIndex = (currentSongIndex + 1) % playlist.querySelectorAll('audio').length;
+        }
+
+        const allSongs = playlist.querySelectorAll('audio');
+        allSongs[currentSongIndex].pause();
+        allSongs[nextSongIndex].play();
+        currentSongIndex = nextSongIndex;
+        updateNowPlayingInfo();
+    }
+</script>
+
+<script>
+
+    const inputFiltro = document.querySelector('.filtro');
+    const albumContainer = document.querySelector('.album-container');
+    const albums = albumContainer.querySelectorAll('.card_planos3');
+
+    inputFiltro.addEventListener('input', function () {
+        const filtro = inputFiltro.value.toLowerCase();
+
+        albums.forEach(album => {
+            const albumNome = album.querySelector('strong').textContent.toLowerCase();
+
+            if (albumNome.includes(filtro)) {
+                album.style.display = 'flex';
+                album_vazio.style.display = 'none'
+                open_music.style.display = 'flex'
+                line_music.style.display = 'flex'
+            } else {
+                album.style.display = 'none';
+                open_music.style.display = 'none'
+                album_vazio.style.display = 'flex'
+                line_music.style.display = 'none'
+                musics.style.display = 'none'
+                album_container.style.display = "none"
+            }
+        });
+    });
+</script>
+
+<script src="../js/app.js"></script>
+<!-- gerador de arquivos, como excel, pdf, e imprimir -->
+<script>
+    $(function () {
+        $("#all_users").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": false,
+        }).buttons().container().appendTo('#all_users_wrapper .col-md-6:eq(0)');
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+        });
+    });
+
+</script>
+
+<script src="../plugins/jszip/jszip.min.js"></script>
+<script src="../plugins/pdfmake/pdfmake.min.js"></script>
+<script src="../plugins/pdfmake/vfs_fonts.js"></script>
+
+<script>
+    // script.js
+
+    const musicList = document.querySelectorAll('.music-list li');
+
+    musicList.forEach(musicItem => {
+        musicItem.addEventListener('click', () => {
+            const audioElement = musicItem.querySelector('audio');
+            audioElement.play();
+            // Opcional: Pausar outras músicas em reprodução
+            musicList.forEach(otherItem => {
+                if (otherItem !== musicItem) {
+                    const otherAudio = otherItem.querySelector('audio');
+                    otherAudio.pause();
+                }
+            });
+        });
+    });
+
+</script>
+
+<script>
+    const inputImage = document.getElementById('input-image');
+    const previewImage = document.getElementById('preview-image');
+    const errorMessage = document.getElementById('error-message');
+
+    inputImage.addEventListener('change', function () {
+        const file = this.files[0];
+
+        if (file) {
+            // Validar tamanho da imagem
+            if (file.size > 400000) {
+                window.alert("Erro: A imagem deve ter no máximo 400 de altula e largura.")
+                this.value = '';
+                return;
+            }
+
+            // Validar formato da imagem
+            const allowedExtensions = ['png', 'jpg'];
+            const fileExtension = file.name.split('.').pop().toLowerCase();
+            if (!allowedExtensions.includes(fileExtension)) {
+                window.alert("Erro: Formato de imagem inválido. Selecione PNG ou JPG.")
+
+                return;
+            }
+
+            // Limpar mensagem de erro
+            errorMessage.textContent = '';
+
+            // Ler a imagem como data URL e definir a pré-visualização
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                previewImage.src = e.target.result;
+            };
+
+            reader.readAsDataURL(file);
+        }
+    });
+</script>
+
+<script>
+    document.getElementsByClassName("arquivo-audio").addEventListener("change", (event) => {
+        const arquivo = event.target.files[0];
+        const audio = document.getElementsByClassName("audio");
+
+        audio.src = URL.createObjectURL(arquivo);
+    });
+
+</script>
+
+
+</html>

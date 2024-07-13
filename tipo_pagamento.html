@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wason Upfy</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/libs/scrollue.css">
+    <link rel="shortcut icon" href="../imgs/logo.jpg" type="image/x-icon">
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/javascript.js"></script>
+</head>
+
+<style>
+    #preview-image {
+        width: 400px;
+        height: auto;
+        border: 1px solid #c71585;
+        border-radius: 20px;
+        margin-bottom: 10px;
+    }
+</style>
+
+<body style="background-color: black; color: white;">
+    <header class="fixed-top">
+        <nav class="navbar bg-body-tertiary ">
+            <div class="container-fluid">
+                <div>
+                    <a class="navbar-brand" href="painel.html"><img src="../imgs/logo.jpg" class="logo"
+                            alt="Wason Upfy"></a>
+                </div>
+
+                <div class="container_link1">
+                    <a class="link_navbar" href="painel.html">Painel de Controlo</a>
+                    <a class="link_navbar" href="musics-albuns.html">Minhas músicas</a>
+                    <a class="link_navbar" href="financa.html">Finanças</a>
+                    <a class="link_navbar" href="estatistic.html">Estatísticas</a>
+                    <a class="link_navbar" href="#" style=" color: #c71585; border-bottom: 1px solid #c71585;  padding: 0 5px;">Nossos Planos</a>
+                    <a class="link_navbar" href="configuration.html">Configurações</a>
+
+                </div>
+                <button class="navbar-toggler btn_menu" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-menu" style="color: #c71585;">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel" style="background-color: black; color: #c71585;">
+                    <div class="offcanvas-header" style="padding: 20px 30px 0 30px;">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Wason Upfy</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
+                            style=" background-color: #c71585;">
+                        </button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" style="row-gap: 10px;">
+                            <a class="link_navbar" href="painel.html">Painel de Controlo</a>
+                            <a class="link_navbar" href="musics-albuns.html">Minhas músicas</a>
+                            <a class="link_navbar" href="financa.html">Finanças</a>
+                            <a class="link_navbar" href="estatistic.html">Estatísticas</a>
+                            <a class="link_navbar" href="#" style=" color: #c71585; border-bottom: 1px solid #c71585;  padding: 0 5px;">Nossos Planos</a>
+                            <a class="link_navbar" href="configuration.html">Configurações</a>
+        
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!---------------INICIO DO BACKEND---------------->
+    <main class="main_blog">
+        <div class="container_blog" id="tipo_pagamnto" style="margin-top: 90px;">
+            <div style="width: 700px; padding: 10px; border: #c71585 solid 1px; border-radius: 20px;">
+                <h4 style="text-align: center;">Forma de Pagamento</h4>
+<hr>
+                <div style="display: flex; flex-direction: column; align-items: center; row-gap: 10px;">
+                    <a href="#" class="btn add_contas" style="width: 100%; margin-bottom: 5px;">Stripe</a>
+                    <a href="#" class="btn add_contas" style="width: 100%; margin-bottom: 5px;">Multicaixa Express</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <!---------------FIM DO BACKEND---------------->
+
+</body>
+
+<script src="../js/app.js"></script>
+<!-- gerador de arquivos, como excel, pdf, e imprimir -->
+<script>
+    $(function () {
+        $("#all_users").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": false,
+        }).buttons().container().appendTo('#all_users_wrapper .col-md-6:eq(0)');
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+        });
+    });
+
+</script>
+
+<script>
+    $(function () {
+        $("#all_users2").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": false,
+        }).buttons().container().appendTo('#all_users_wrapper .col-md-6:eq(0)');
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+        });
+    });
+
+</script>
+
+<script>
+    $(function () {
+        $("#all_users3").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": false,
+        }).buttons().container().appendTo('#all_users_wrapper .col-md-6:eq(0)');
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+        });
+    });
+
+</script>
+<script src="../plugins/jszip/jszip.min.js"></script>
+<script src="../plugins/pdfmake/pdfmake.min.js"></script>
+<script src="../plugins/pdfmake/vfs_fonts.js"></script>
+
+
+
+</html>

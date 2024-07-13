@@ -1,0 +1,1527 @@
+#login,
+#recuperar_senha_1,
+#recuperar_senha_2,
+#recuperar_senha_3,
+#cadastro,
+#comfirmar_cadastro_1,
+#comfirmar_cadastro_2,
+#comfirmar_cadastro_3,
+#comfirmar_cadastro_4,
+.contactar,
+#transferencia,
+#musics {
+    animation: fadeIn 2s linear;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.card_planos,
+.card_planos2,
+.card_planos3 {
+    transition: transform 0.5s;
+}
+
+.card_planos:hover,
+.card_planos2:hover,
+.card_planos3:hover {
+    transform: scale(0.9);
+    backdrop-filter: blur(1px);
+    box-shadow: 0 0 20px #c71585;
+}
+
+.card_planos2 audio {
+    margin-bottom: -25px;
+}
+
+.transition_checkbox {
+    transition: transform 1s;
+}
+
+.transition_checkbox:checked {
+    transform: scale(4);
+}
+
+
+
+#card_planos_border:hover {
+    backdrop-filter: blur(1px);
+    box-shadow: 0 0 20px gold;
+}
+
+body {
+    margin-top: 70px;
+    background-color: black;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-size: medium;
+    scroll-behavior: smooth;
+}
+
+
+
+header {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-bottom: #c71585 1px solid;
+}
+
+.navbar {
+    display: flex;
+    width: 90%;
+}
+
+.logo {
+    border: 1px solid #c71585;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+}
+
+.link_navbar {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+
+    transition: color 0.3s;
+}
+
+.link_navbar:hover {
+    color: #c71585;
+    border-bottom: 1px solid #c71585;
+}
+
+
+.link_navbar:active {
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+
+.link_navbar_off {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+    transition: color 0.5s;
+}
+
+.link_navbar_off:hover {
+    color: #c71585;
+    border-bottom: 1px solid #c71585;
+    padding: 0 5px;
+}
+
+
+.link_navbar_off:active {
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+
+
+.btn_menu {
+    display: none;
+    border: #c71585 solid 1px;
+}
+
+.btn_menu:hover {
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px #c71585;
+}
+
+.btn_menu:active {
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px #c71585;
+}
+
+.main {
+    background-image: url(../imgs/fundo1.jpg);
+    background-size: cover;
+    background-position: center 25%;
+    padding-bottom: 10px;
+    height: 600px;
+    border-bottom: #c71585 solid 3px;
+
+}
+
+
+.container_conteudo {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    color: white;
+}
+
+.conteudo {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10%
+}
+
+.container_planos {
+    display: flex;
+    flex-direction: column;
+    width: 650px;
+}
+
+.img_planos {
+    margin-top: 20px;
+    display: flex;
+    column-gap: 30px;
+}
+
+.img_planos img {
+    width: 70px;
+}
+
+.img_plan {
+    width: 450px;
+}
+
+hr {
+    background-color: #c71585;
+    color: #c71585;
+    padding: 1px;
+}
+
+.container_all_plan {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    padding: 0;
+}
+
+.link_plan {
+    width: 83%;
+}
+
+.container_all_ganha {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap;
+    color: white;
+
+    gap: 20px;
+}
+
+
+.h_plan {
+    text-align: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+footer {
+    background-color: black;
+    border-top: #c71585 solid 3px;
+    color: white;
+    padding-bottom: 30px;
+}
+
+.footer_links {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+.hight {
+    height: 50px;
+}
+
+.links_footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.links_footer a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.links_footer a:hover {
+    color: #c71585;
+}
+
+.links_footer a:active {
+    color: white;
+}
+
+.footer_meio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    gap: 20px;
+}
+
+.fim_footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.footer_links {
+    margin-bottom: -8px;
+}
+
+.footer_links a {
+    transition: transform 0.3s;
+}
+
+.footer_links a:hover {
+    transform: scale(1.2);
+}
+
+#sobre {
+    display: none;
+    background-color: black;
+    border-bottom: #c71585 solid 4px;
+    color: white;
+
+    padding: 40px 0;
+}
+
+
+.container_forms,
+#criar_album,
+#criar_album_img {
+    display: flex;
+    width: 70%;
+    margin: 35px 0;
+    flex-direction: column;
+}
+
+.container_forms form,
+#comfirmar_cadastro_3 {
+    width: 100%;
+    background-color: black;
+}
+
+#recuperar_senha_1 input:focus,
+#recuperar_senha_2 input:focus,
+#recuperar_senha_3 input:focus,
+#cadastro input:focus,
+#login input:focus,
+#comfirmar_cadastro_1 input:focus,
+#comfirmar_cadastro_2 input:focus,
+#comfirmar_cadastro_3 input:focus,
+.contactar input:focus,
+textarea:focus,
+#transferencia form input:focus,
+textarea:focus,
+.album input:focus,
+#criar_album input:focus,
+#container_cadastrar_faixas input:focus,
+#express input:focus,
+#paypal input:focus,
+.input:active,
+#alterar_senha_e_email input:focus,
+#atualizar_conta_bancaria_form #express_atualizar_conta input:focus, #paypal_atualizar_conta input:focus{
+    box-shadow: inset 0 0 20px #c71585;
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+#recuperar_senha_1,
+#recuperar_senha_2,
+#recuperar_senha_3,
+#cadastro input,
+#login input,
+#comfirmar_cadastro_1 input,
+#comfirmar_cadastro_2 input,
+#comfirmar_cadastro_3 input,
+.album input,
+textarea,
+#criar_album_img input,
+#criar_album input,
+#container_cadastrar_faixas input,
+#express input,
+#paypal input,
+.input,
+#alterar_senha_e_email input,
+#atualizar_conta_bancaria_form #express_atualizar_conta input, #paypal_atualizar_conta input{
+    color: white;
+}
+
+#autenticacao {
+    display: none;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    border-bottom: #c71585 solid 4px;
+}
+
+#login,
+#recuperar_senha_1,
+#recuperar_senha_2,
+#recuperar_senha_3,
+#cadastro,
+#comfirmar_cadastro_1,
+#comfirmar_cadastro_2,
+#comfirmar_cadastro_3,
+#comfirmar_cadastro_4 {
+    display: none;
+}
+
+
+.container_forms form input,
+#comfirmar_cadastro_3 input,
+.contactar input,
+textarea,
+#criar_album input,
+#criar_album_img input,
+#container_cadastrar_faixas input,
+#express input,
+#paypal input,
+.input,
+#alterar_senha_e_email input,
+#atualizar_conta_bancaria_form #express_atualizar_conta input, #paypal_atualizar_conta input {
+    background-color: transparent;
+    border: #c71585 solid 1px;
+    margin-bottom: 20px;
+}
+
+.footer_links a svg {
+    color: white;
+}
+
+.hight {
+    width: 40px;
+    height: 40px;
+}
+
+.btn_autenticacao {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.input_gruop {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.priv_container {
+    padding: 40px 0;
+}
+
+.card_planos {
+    background-color: black;
+    border: #c71585 solid 1px;
+    width: 300px;
+}
+
+.card_planos2 {
+    background-color: black;
+    border: #c71585 solid 1px;
+    width: 150px;
+}
+
+.card_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.container_cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 30px;
+}
+
+.container_planos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+}
+
+.link_criador {
+    text-decoration: none;
+    color: #c71585;
+    font-size: larger;
+}
+
+.link_criador:hover {
+    text-decoration: underline;
+    color: #c71585;
+
+}
+
+.container_blog {
+    background-color: black;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 30px;
+}
+
+#contacta_nos {
+    border-top: #c71585 solid 2px;
+    color: white;
+
+    display: none;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+.priv_container div {
+    text-align: justify;
+}
+
+.container_cards {
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#usd {
+    display: none;
+}
+
+#transferencia {
+    display: none;
+    justify-content: center;
+    text-align: center;
+    border-bottom: #c71585 solid 1px;
+}
+
+#transferencia form input,
+textarea {
+    color: white;
+}
+
+.album-main {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.music-list li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.music-list {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-right: 25px;
+}
+
+.album input:focus {
+    border: none;
+}
+
+
+
+.album input {
+    background-color: transparent;
+    border: #c71585 solid 1px;
+}
+
+#open_music {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#close_musics {
+    display: none;
+    justify-content: center;
+    width: 100%;
+}
+
+#musics,
+#open_musics {
+    display: none;
+}
+
+#gerenciar_album form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#criar_album,
+#criar_album_img,
+#artist_info,
+#delete_album {
+    display: none;
+    margin-top: -10px;
+}
+
+
+
+#artist_info2 {
+    display: none;
+}
+
+#container_cadastrar_faixas {
+    display: flex;
+}
+
+#cadastrar_faixas_1,
+#artist_info3 {
+    display: none;
+}
+
+#cadastrar_faixas_2 {
+    display: none;
+}
+
+.container_lojas {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.137);
+    column-gap: 40px;
+    row-gap: 20px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.transition_checkbox2 {
+    transform: scale(2);
+    margin-top: 16px;
+}
+
+.transition_checkbox {
+    transform: scale(3);
+    margin-top: 16px;
+}
+
+.transition_checkbox:focus {
+    box-shadow: inset 0 0 20px white;
+}
+
+.controlos_musicas div {
+    background-color: #c71585;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.controlos_musicas div:hover {
+    background-color: #74014a;
+}
+
+.controlos_musicas div:active {
+    background-color: #c71585;
+}
+
+.album-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.album-header2 {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.header_body {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.container_img_album {
+    display: flex;
+    width: 400px;
+    margin-bottom: 10px;
+}
+
+#container_cadastrar_faixas {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#container_cadastrar_faixas form {
+    width: 70%;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+
+}
+
+#cadastrar_faixas_1,
+#cadastrar_faixas_2 {
+    width: 100%;
+
+}
+
+.container_delete {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.btn_contas {
+    border: #c71585 solid 1px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    width: 700px;
+}
+
+.btn_contas:hover {
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 15px #c71585;
+    color: white;
+}
+
+.btn_contas:active {
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 15px white;
+    color: white;
+    border: white solid 1px;
+}
+
+.contas_bancarias {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    border: #c71585 solid 1px;
+    gap: 20px;
+    width: 600px;
+
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.body_contas {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.container_img {
+    width: 90px;
+}
+
+.add_contas {
+    background-color: #c71585;
+    color: white;
+    width: 600px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.add_contas:hover {
+    color: white;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 15px #c71585;
+    color: white;
+}
+
+.add_contas:active {
+    color: white;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 15px white;
+    border: white solid 1px;
+}
+
+.container_img img {
+    border-radius: 15px;
+}
+
+#container_conta_bancaria_form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#express,
+#paypal {
+    width: 800px;
+}
+
+#container_conta_bancaria_form,
+#express,
+#paypal {
+    display: none;
+}
+
+#nowPlaying {
+    display: none;
+    border-top: #c71585 solid 1px;
+    margin-top: 20px;
+    padding-top: 20px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.controlos_musicas {
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.card-text {
+    display: block;
+    text-align: left;
+}
+
+.btn_dropdown {
+    background-color: #c71585;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.btn_dropdown2 {
+    background-color: gold;
+    border-radius: 10px;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.container_finiacas,
+.container_finiacas2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.padding_table {
+    padding: 15 px;
+}
+
+#musics2,
+#close_musics2,
+#nowPlaying2,
+#line_top_music,
+#delete_musica {
+    display: none;
+}
+
+#nowPlaying2 {
+    justify-content: center;
+    margin-top: 20px;
+    align-items: center;
+    gap: 10px;
+}
+
+.album {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+#album_vazio {
+    display: none;
+}
+
+.padding_table {
+    padding: 15px;
+}
+
+.icones {
+    margin-right: 10px;
+}
+
+.container_dados {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.dados {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: #74014a solid 1px;
+    margin-bottom: 30px;
+}
+
+.dados a {
+    text-decoration: none;
+    color: white;
+}
+
+.dados a:hover {
+    text-decoration: underline;
+}
+
+.dados a:active {
+    text-decoration: underline;
+    color: #c71585;
+}
+
+#alterar_senha_e_email {
+    display: flex;
+    justify-content: center;
+}
+
+#container_configuracao {
+    display: block;
+}
+
+#alterar_senha,
+#alterar_email {
+    margin-top: 50px;
+    margin-bottom: 60px;
+    width: 700px;
+}
+
+#alterar_senha,
+#comfirmar_email,
+#senha_alterada,
+
+#alterar_email,
+#comfirmar_senha,
+#email_alterada {
+    display: none;
+}
+
+
+
+.card_planos3 {
+    background-color: black;
+    border: #c71585 solid 1px;
+    width: 220px;
+}
+
+.card_planos4 {
+    background-color: black;
+    border: #c71585 solid 1px;
+}
+
+.album-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+.album-container2 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.album-header2,
+.album-header {
+    padding: 0 30px;
+}
+
+.rowTop {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    border-top: #c71585 solid 1px;
+    padding-top: 8px;
+    margin-top: 10px;
+}
+
+#button_voltar_album {
+    display: none;
+}
+
+#addAlbum {
+    display: block;
+}
+
+.hgrupo img {
+    width: 100px;
+}
+
+.img_plan {
+    max-width: 300px;
+}
+
+.container_all_ganha img {
+    max-width: 150px;
+}
+
+.hgrupo img {
+    width: 70px;
+}
+
+#artist_info4,
+#artist_info5,
+#addAlbum,
+#criarAlbum_1,
+#criarAlbum_2,
+#criarAlbum_3,
+#criarAlbum_4,
+#comfirmar_cadastro_4_ver_dados,
+#recuperar_senha_2_2 {
+    display: none;
+}
+
+#preview-image {
+    width: 400px;
+    margin-top: 20px;
+}
+
+
+.img_planos {
+    display: flex;
+    justify-content: center;
+}
+
+.offcanvas-body a{
+    border-bottom: white solid 1px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+#paypal_atualizar_conta{
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .row {
+        flex-direction: column;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .col-4 {
+        width: 100%;
+    }
+
+    .col-8 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    audio {
+        width: 90%;
+    }
+
+    .button-faixas a:last-child {
+        margin-top: 10px;
+    }
+
+    .button-faixas a:nth-child(1) {
+        margin-right: 5px;
+    }
+
+
+    .container_all_ganha img {
+        width: 100px;
+    }
+
+    .img_plan {
+        max-width: 200px;
+    }
+
+    .text_planos {
+        text-align: center;
+    }
+
+    .fim_footer{
+        display: flex;
+        flex-direction: column;
+    }
+
+ .text_inform{
+    text-align: center;
+ }
+    
+}
+
+@media only screen and (max-width: 300px) {
+
+    .container_finiacas2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .card_planos3 {
+        width: 90%;
+    }
+
+    .album-header2,
+    .album-header {
+        padding: 5px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+
+    .hgrupo img {
+        width: 50px;
+    }
+
+    .button-faixas {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .body_contas {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .contas_bancarias {
+        margin-top: 60px;
+    }
+
+
+}
+
+@media only screen and (max-width: 780px) {
+
+    .album {
+        padding: 5px;
+    }
+
+    .transition_checkbox {
+        transform: scale(2);
+        margin-top: 16px;
+    }
+
+    .transition_checkbox:checked {
+        transform: scale(2);
+    }
+
+
+
+}
+
+@media only screen and (max-width: 700px) {
+
+    .icones {
+        display: flex;
+        align-content: flex-start;
+    }
+
+    #nowPlaying2 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #songTitle,
+    #songTitle2 {
+        margin-top: -10px;
+    }
+
+    .contas_bancarias,
+    .add_contas {
+        width: 90%;
+    }
+
+    .container_img {
+        width: 75px;
+    }
+
+    * {
+        font-size: small;
+    }
+
+
+    .section {
+        padding: 7px;
+    }
+
+    .alert-danger{
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+   
+    .container_all_plan {
+        flex-direction: column;
+    }
+
+    .img_planos {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .rowTop {
+
+        padding-bottom: 9px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #alterar_senha_e_email #alterar_senha {
+        width: 90%;
+    }
+
+    #alterar_senha_e_email #alterar_email {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .album-container {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 870px) {
+
+ 
+
+    #express,
+    #paypal {
+        width: 90%;
+    }
+
+    .btn_contas {
+        width: 90%;
+    }
+
+    .container_delete {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        margin-top: -50px;
+        align-items: center;
+    }
+
+    #container_cadastrar_faixas form {
+        width: 90%;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+
+    }
+
+
+    .music-list audio {
+        width: 100%;
+    }
+
+    .container_nomes_album {
+        text-align: center;
+    }
+
+    .container_img_album {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+    }
+
+    #gerenciar_album #criar_album,
+    #criar_album_img {
+        width: 90%;
+        text-align: center;
+    }
+
+    #delete_album_musicas .container_forms {
+        width: 100%;
+    }
+
+    .container_lojas {
+        padding: 5px;
+        column-gap: 20px;
+        font-size: small;
+    }
+
+    .album-header,
+    .album-header2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container_all_ganha {
+        display: flex;
+    }
+
+    .input_gruop {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        row-gap: 20px;
+    }
+
+    .input_gruop2{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        row-gap: 0;
+    }
+
+    .container_forms {
+        width: 90%;
+    }
+
+
+
+    .footer_links {
+        gap: 15px;
+    }
+
+
+    .btn_autenticacao {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .priv_container h3 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .section {
+        height: 100%;
+    }
+
+    .container_cards {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container_lancamentos {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .priv_container div {
+        padding: 20px;
+        align-items: center;
+    }
+
+    .priv_container p {
+        text-align: justify;
+    }
+
+    .priv_container h4 {
+        text-align: center;
+    }
+
+
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .container_finiacas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .plan_titulo {
+        text-align: center;
+    }
+
+    #nowPlaying {
+        text-align: center;
+    }
+
+    .controlos_musicas {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container_all_plan {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer_meio {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .fim_footer {
+        justify-content: center;
+    }
+
+    .card_planos {
+        width: 90%;
+    }
+
+    .card_planos2 {
+        width: 135px;
+    }
+
+
+
+    .logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    body {
+        margin-top: 60px;
+    }
+
+
+
+}
+
+@media only screen and (max-width: 1000px) {
+    .container_all_plan {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+    }
+
+    #nowPlaying {
+        display: none;
+        flex-direction: column;
+    }
+
+    .header_body {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .album-header {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+
+    }
+
+    .album-header2 {
+        display: flex;
+        justify-content: center;
+        row-gap: 10px;
+    }
+
+
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1211px) {
+    .rowTop {
+
+        padding-bottom: 9px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+
+    .img_plan {
+        margin: 30px 0;
+    }
+
+    .container_link1 {
+        display: none;
+    }
+
+    .btn_menu {
+        display: flex;
+    }
+
+    .container_planos {
+        align-items: center;
+    }
+
+    .text_planos {
+        text-align: center;
+    }
+
+}

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wason Upfy</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/libs/scrollue.css">
+    <link rel="shortcut icon" href="../imgs/logo.jpg" type="image/x-icon">
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/javascript.js"></script>
+</head>
+
+<style>
+    #preview-image {
+        width: 400px;
+        height: auto;
+        border: 1px solid #c71585;
+        border-radius: 20px;
+        margin-bottom: 10px;
+    }
+</style>
+
+<body style="background-color: black; color: white;">
+    <header class="fixed-top">
+        <nav class="navbar bg-body-tertiary ">
+            <div class="container-fluid">
+                <div>
+                    <a class="navbar-brand" href="painel.html"><img src="../imgs/logo.jpg" class="logo"
+                            alt="Wason Upfy"></a>
+                </div>
+
+                <div class="container_link1">
+                    <a class="link_navbar" href="painel.html">Painel de Controlo</a>
+                    <a class="link_navbar" href="musics-albuns.html">Minhas músicas</a>
+                    <a class="link_navbar" href="financa.html">Finanças</a>
+                    <a class="link_navbar" href="estatistic.html">Estatísticas</a>
+                    <a class="link_navbar" href="planos.html">Nossos Planos</a>
+                    <a class="link_navbar" href="configuration.html"
+                        style=" color: #c71585; border-bottom: 1px solid #c71585;  padding: 0 5px;">Configurações</a>
+
+                </div>
+                <button class="navbar-toggler btn_menu" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-menu" style="color: #c71585;">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel" style="background-color: black; color: #c71585;">
+                    <div class="offcanvas-header" style="padding: 20px 30px 0 30px;">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Wason Upfy</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
+                            style=" background-color: #c71585;">
+                        </button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" style="row-gap: 10px;">
+                            <a class="link_navbar" href="painel.html">Painel de Controlo</a>
+                            <a class="link_navbar" href="musics-albuns.html">Minhas músicas</a>
+                            <a class="link_navbar" href="financa.html">Finanças</a>
+                            <a class="link_navbar" href="estatistic.html">Estatísticas</a>
+                            <a class="link_navbar" href="planos.html">Nossos Planos</a>
+                            <a class="link_navbar" href="configuration.html">Configurações</a>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="main_blog" id="container_configuracao">
+        <div class="container_blog" id="tipo_pagamnto" style="margin-top: 90px;">
+            <div style="width: 700px;  padding: 10px; border: #c71585 solid 1px; border-radius: 20px;">
+                <h4 style="text-align: center;">Configurações</h4>
+                <hr>
+                <div
+                    style="display: flex; flex-direction: column; align-items: center; row-gap: 15px; text-align: center;">
+                    <button type="button" class="btn add_contas" style="width: 100%;" data-bs-toggle="modal"
+                        data-bs-target="#perfil">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-user icones">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>Perfil de Artista</button>
+                    <a href="contas_bancarias.html" class="btn add_contas" style="width: 100%;">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-user-check icones">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="8.5" cy="7" r="4"></circle>
+                            <polyline points="17 11 19 13 23 9"></polyline>
+                        </svg>Minha Conta</a>
+                    <a href="priv_terms/priv.html" class="btn add_contas" style="width: 100%;">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-shield icones">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                        <div>
+                            Segurança e
+                            privacidade
+                        </div>
+                    </a>
+                    <a href="priv_terms/#" class="btn add_contas" style="width: 100%;">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-help-circle icones">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                        </svg>
+                        Ajuda e Suporte</a>
+                    <a href="priv_terms/terms.html" class="btn add_contas" style="width: 100%;">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-file-textc icones">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                        Termos e condições</a>
+
+
+                </div>
+                <hr>
+                <button type="button" class="btn add_contas" style="width: 100%; margin-bottom: 15px;"
+                    data-bs-toggle="modal" data-bs-target="#terminarSessao">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-log-out icones">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                        <polyline points="16 17 21 12 16 7"></polyline>
+                        <line x1="21" y1="12" x2="9" y2="12"></line>
+                    </svg>Terminar a Sessão
+                </button>
+                <button type="button" class="btn add_contas" style="width: 100%; margin-bottom: 15px;"
+                    onclick="open_change_passeword()">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-key icones">
+                        <path
+                            d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4">
+                        </path>
+                    </svg>Alterar Senha</button>
+                <button type="button" class="btn add_contas" style="width: 100%;" onclick="open_change_email()">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-mail icones">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    Alterar o E-mail</button>
+                <hr>
+                <a href="painel.html" class="btn add_contas" style="width: 100%;">
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-arrow-left" style="margin-right: 5px;">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    Voltar para o Painel</a>
+            </div>
+
+        </div>
+    </main>
+
+    <!---------------INICIO DO BACKEND---------------->
+    <section id="alterar_senha_e_email">
+        <div id="alterar_senha">
+
+            <div id="comfirmar_email">
+                <form>
+                    <h4 style="text-align: center;">Alterando a sua Senha - 1º Passo (E-mail)</h4>
+                    <div class="form-floating" style="width: 100%; color: white;">
+                        <input type="email" class="form-control " id="email" placeholder="nome@email.com" required
+                            autocomplete="email" name="nome">
+                        <!---------------INPUT - ALTERAR O NAME ---------------->
+                        <label for="">Digite o seu E-mail</label>
+                    </div>
+
+                    <button type="button" class="btn"
+                        style="background-color: #c71585; color: white; width: 100%; margin-bottom: 15px;"
+                        onclick="open_change_passeword_avancar()">Avançar</button>
+                    <button type="button" class="btn" style="background-color: #c71585; color: white; width: 100%;"
+                        onclick="cancelar_change_passeword()">Cancelar</button>
+                </form>
+            </div>
+
+            <div id="senha_alterada">
+                <form action="configuration.html" method="post">
+                    <h4 style="text-align: center;">Alterando a sua Senha - 2º Passo (Final)</h4>
+                    <div class="form-floating" style="width: 100%; color: white;">
+                        <input type="password" class="form-control" id="" placeholder="*******" required
+                            autocomplete="new-password" name="nome">
+                        <!---------------INPUT - ALTERAR O NAME ---------------->
+                        <label for="">Digite a nova senha</label>
+                    </div>
+
+                    <div class="form-floating" style="width: 100%; color: white;">
+                        <input type="password" class="form-control" id="nome_albun" placeholder="nome@email.com"
+                            required autocomplete="off" name="nome">
+                        <!---------------INPUT - ALTERAR O NAME ---------------->
+                        <label for="">Comfirmar a nova senha</label>
+                    </div>
+
+                    <button type="submit" class="btn"
+                        style="background-color: #c71585; color: white; width: 100%; margin-bottom: 15px;">Avançar</button>
+                    <button type="button" class="btn" style="background-color: #c71585; color: white; width: 100%;"
+                        onclick="voltar_para_change_passeword()">Voltar</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="alterar_email">
+            <div id="comfirmar_senha">
+                <form>
+                    <h4 style="text-align: center;">Alterando o seu E-mail - 1º Passo (Senha)</h4>
+                    <div class="form-floating" style="width: 100%; color: white;">
+                        <input type="password" class="form-control " id="email" placeholder="*****" required
+                            autocomplete="email" name="nome">
+                        <!---------------INPUT - ALTERAR O NAME ---------------->
+                        <label for="">Digite a sua Senha</label>
+                    </div>
+
+                    <button type="button" class="btn"
+                        style="background-color: #c71585; color: white; width: 100%; margin-bottom: 15px;"
+                        onclick="open_change_email_avancar()">Avançar</button>
+                    <button type="button" class="btn" style="background-color: #c71585; color: white; width: 100%;"
+                        onclick="cancelar_change_email()">Cancelar</button>
+                </form>
+            </div>
+
+            <div id="email_alterada">
+                <form action="configuration.html" method="post">
+                    <h4 style="text-align: center;">Alterando o seu E-mail - 2º Passo (Final)</h4>
+                    <div class="form-floating" style="width: 100%; color: white;">
+                        <input type="email" class="form-control" id="" placeholder="*******" required
+                            autocomplete="email" name="nome">
+                        <!---------------INPUT - ALTERAR O NAME ---------------->
+                        <label for="">Digite o seu Antigo E-mail </label>
+                    </div>
+
+                    <div class="form-floating" style="width: 100%; color: white;">
+                        <input type="email" class="form-control" id="nome_albun" placeholder="nome@email.com" required
+                            autocomplete="off" name="nome">
+                        <!---------------INPUT - ALTERAR O NAME ---------------->
+                        <label for="">Digite o seu novo E-mail</label>
+                    </div>
+
+                    <button type="submit" class="btn"
+                        style="background-color: #c71585; color: white; width: 100%; margin-bottom: 15px;">Avançar</button>
+                    <button type="button" class="btn" style="background-color: #c71585; color: white; width: 100%;"
+                        onclick="voltar_para_change_email()">Voltar</button>
+                </form>
+            </div>
+        </div>
+
+    </section>
+    <!---------------FIM DO BACKEND---------------->
+
+
+
+    <!---------------Modal - Perfil Usuário---------------->
+
+    <div class="modal fade" id="perfil" tabindex="-1" aria-labelledby="imagemModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" style="backdrop-filter: blur(30px);
+    box-shadow: 0 0 20px #c71585; background-color: transparent; color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imagemModalLabel">Wasom Upfy</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"
+                        style="color: white; background-color: #c71585;"></button>
+                </div>
+                <div class="modal-body">
+                    <h4 style="text-align: center;">Perfil do Artista</h4>
+                    <hr>
+                    <div class="container_dados">
+                        <div class="dados">
+                            <div>
+                                <h6>Nome do Artista:</h6>
+                            </div>
+
+                            <div>
+                                <h6>Helder Adão</h6>
+                            </div>
+                        </div>
+
+                        <div class="dados">
+                            <div>
+                                <h6>País:</h6>
+                            </div>
+
+                            <div>
+                                <h6>Angola</h6>
+                            </div>
+                        </div>
+
+                        <div class="dados">
+                            <div>
+                                <h6>Cidade:</h6>
+                            </div>
+
+                            <div>
+                                <h6>Luanda</h6>
+                            </div>
+                        </div>
+
+                        <div class="dados">
+                            <h6>E-mail:</h6>
+                            <h6><a href="mailto:heldergabriel@gmail.com " target="_blank"
+                                    id="email_verific">heldergabriel@gmail.com</a>
+                            </h6>
+                        </div>
+
+                        <div class="dados">
+                            <h6>Telefone:</h6>
+                            <h6><a href="tel:+943499135" target="_blank">943499135</a></h6>
+                        </div>
+
+                        <div class="dados">
+                            <h6>Links:</h6>
+                            <h6><a href="http://spotify.com" target="_blank">Spotify</a></h6>
+                        </div>
+
+                        <div class="dados">
+                            <h6>Plano Pago:</h6>
+                            <h6>Manager</h6>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------------Modal - terminar sessão---------------->
+
+    <div class="modal fade" id="terminarSessao" tabindex="-1" aria-labelledby="imagemModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content"
+                style="backdrop-filter: blur(30px); box-shadow: 0 0 20px #c71585; background-color: transparent; color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imagemModalLabel2">Wasom Upfy</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"
+                        style="color: white; background-color: #c71585;"></button>
+                </div>
+                <div class="modal-body">
+                    <h4 style="text-align: center; margin-bottom: 23px;">Pretendes Terminar a Sessão ?</h4>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Não Terminar a
+                            Sessão</button>
+                        <button type="button" class="btn btn-danger">Sim Terminar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="../js/app.js"></script>
+<!-- gerador de arquivos, como excel, pdf, e imprimir -->
+<script>
+    $(function () {
+        $("#all_users").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": false,
+        }).buttons().container().appendTo('#all_users_wrapper .col-md-6:eq(0)');
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+        });
+    });
+
+</script>
+
+<script>
+    $(function () {
+        $("#all_users2").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": false,
+        }).buttons().container().appendTo('#all_users_wrapper .col-md-6:eq(0)');
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+        });
+    });
+
+</script>
+
+<script>
+    $(function () {
+        $("#all_users3").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": false,
+        }).buttons().container().appendTo('#all_users_wrapper .col-md-6:eq(0)');
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+        });
+    });
+
+</script>
+<script src="../plugins/jszip/jszip.min.js"></script>
+<script src="../plugins/pdfmake/pdfmake.min.js"></script>
+<script src="../plugins/pdfmake/vfs_fonts.js"></script>
+
+
+
+</html>

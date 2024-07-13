@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wason Upfy</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/libs/scrollue.css">
+    <link rel="shortcut icon" href="../imgs/logo.jpg" type="image/x-icon">
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/javascript.js"></script>
+</head>
+
+<style>
+    #preview-image {
+        width: 400px;
+        height: auto;
+        border: 1px solid #c71585;
+        border-radius: 20px;
+        margin-bottom: 10px;
+    }
+</style>
+
+<body style="background-color: black; color: white;">
+    <header class="fixed-top">
+        <nav class="navbar bg-body-tertiary ">
+            <div class="container-fluid">
+                <div>
+                    <a class="navbar-brand" href="painel.html"><img src="../imgs/logo.jpg" class="logo"
+                            alt="Wason Upfy"></a>
+                </div>
+
+                <div class="container_link1">
+                    <a class="link_navbar" href="painel.html">Painel de Controlo</a>
+                    <a class="link_navbar" href="musics-albuns.html">Minhas músicas</a>
+                    <a class="link_navbar" href="#"
+                        style=" color: #c71585; border-bottom: 1px solid #c71585;  padding: 0 5px;">Finanças</a>
+                    <a class="link_navbar" href="estatistic.html">Estatísticas</a>
+                    <a class="link_navbar" href="planos.html">Nossos Planos</a>
+                    <a class="link_navbar" href="configuration.html">Configurações</a>
+
+                </div>
+                <button class="navbar-toggler btn_menu" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-menu" style="color: #c71585;">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel" style="background-color: black; color: #c71585;">
+                    <div class="offcanvas-header" style="padding: 20px 30px 0 30px;">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Wason Upfy</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
+                            style=" background-color: #c71585;">
+                        </button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" style="row-gap: 10px;">
+                            <a class="link_navbar" href="painel.html">Painel de Controlo</a>
+                            <a class="link_navbar" href="musics-albuns.html">Minhas músicas</a>
+                            <a class="link_navbar" href="#"
+                                style=" color: #c71585; border-bottom: 1px solid #c71585;  padding: 0 5px;">Finanças</a>
+                            <a class="link_navbar" href="estatistic.html">Estatísticas</a>
+                            <a class="link_navbar" href="planos.html">Nossos Planos</a>
+                            <a class="link_navbar" href="configuration.html">Configurações</a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!---------------INICIO DO BACKEND---------------->
+
+    <main style="display: flex; justify-content: center;">
+
+        <div class="contas_bancarias">
+            <h4 style="border-bottom: #c71585 solid 1px; width: 100%; text-align: center; padding-bottom: 10px;">
+                Conta(s) Bancária(s)</h4>
+
+            <div class="body_contas" style="margin-top: -8px; border-bottom: #c71585 solid 1px; padding-bottom: 20px;">
+                <div style="display: flex; flex-direction: row; align-items: center; column-gap: 10px;">
+                    <div class="container_img">
+                        <img src="../imgs/express.png" alt="" class="img-fluid">
+                    </div>
+
+                    <div class="container_dados2">
+                        <h6>NOME: Cristiano Amadeu</h6>
+                        <h6>TELEFONE: 935 288 300</h6>
+                        <h6>IBAN: AO600006785679041</h6>
+                    </div>
+                </div>
+
+                <div style="display: flex; justify-content: right; ">
+                    <div style="display: flex; flex-direction: row; column-gap: 15px;">
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                            data-bs-target="#eliminar_conta">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-trash-2">
+                                <polyline points="3 6 5 6 21 6"></polyline>
+                                <path
+                                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                </path>
+                                <line x1="10" y1="11" x2="10" y2="17"></line>
+                                <line x1="14" y1="11" x2="14" y2="17"></line>
+                            </svg>
+                        </button>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#atulizar_conta">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-refresh-cw">
+                                <polyline points="23 4 23 10 17 10"></polyline>
+                                <polyline points="1 20 1 14 7 14"></polyline>
+                                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="body_contas">
+                <div style="display: flex; flex-direction: row; align-items: center; column-gap: 10px;">
+                    <div class="container_img">
+                        <img src="../imgs/paypay.png" alt="" class="img-fluid">
+                    </div>
+
+                    <div class="container_dados2">
+                        <h6>NOME: Cristiano Amadeu</h6>
+                        <h6>TELEFONE: 935 288 300</h6>
+                        <h6>E-MAIL: cristianoamadeu7@gmail.com</h6>
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: right; ">
+                    <div style="display: flex; flex-direction: row; column-gap: 15px;">
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                            data-bs-target="#eliminar_conta">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-trash-2">
+                                <polyline points="3 6 5 6 21 6"></polyline>
+                                <path
+                                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                </path>
+                                <line x1="10" y1="11" x2="10" y2="17"></line>
+                                <line x1="14" y1="11" x2="14" y2="17"></line>
+                            </svg>
+                        </button>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#atulizar_conta">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-refresh-cw">
+                                <polyline points="23 4 23 10 17 10"></polyline>
+                                <polyline points="1 20 1 14 7 14"></polyline>
+                                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+    <div style="display: flex; align-items: center; margin-top: 20px; flex-direction: column; row-gap: 10px;">
+        <a href="#container_conta_bancaria_form" class="btn add_contas" onclick="open_express()">+ Adicionar Contas</a>
+        <a href="financa.html" class="btn btn_contas">
+            <span>Voltar</span>
+        </a>
+    </div>
+
+    <hr>
+    <div id="container_conta_bancaria_form">
+        <div id="express">
+            <h3 style="text-align: center;">CONTA BANCÁRIA - Multicaixa Express</h3>
+            <form action="contas_bancarias.html" method="post">
+                <div style="display: flex; margin-bottom: 20px;">
+                    <button type="button" class="btn btn_contas" style="width: 100%; color: #c71585;">Express</button>
+                    <button type="button" class="btn add_contas" style="width: 100%;"
+                        onclick="open_paypal()">Paypal</button>
+                </div>
+                <div class="form-floating">
+                    <input type="text" class="form-control" placeholder="nome@email.com" required autocomplete="bday"
+                        name="nome">
+                    <!---------------INPUT - ALTERAR O NAME ---------------->
+                    <label for="">Nome Completo</label>
+                </div>
+
+                <div class="form-floating">
+                    <input type="text" class="form-control" placeholder="nome@email.com" required autocomplete="tel"
+                        name="nome" maxlength="13" minlength="9">
+                    <!---------------INPUT - ALTERAR O NAME ---------------->
+                    <label for="">Telefone</label>
+                </div>
+
+                <div class="form-floating">
+                    <input type="text" class="form-control" required name="" maxlength="18"
+                        placeholder="AOxxxxxxxxxxxxxxxx" autocomplete="off">
+                    <!---------------INPUT - ALTERAR O NAME ---------------->
+                    <label for="">IBAN</label>
+                </div>
+
+                <!---------------BOTÃO PARA ENVIAR OD DADOS - INICIO--------------->
+                <button type="submit" class="btn add_contas" style="width: 100%;">Salvar Conta</button>
+                <!---------------BOTÃO PARA ENVIAR OD DADOS - FIM--------------->
+                <button type="button" class="btn add_contas" style="width: 100%; margin-top: 20px; margin-bottom: 30px;"
+                    onclick="fechar_express_e_paypal()">
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="feather feather-x">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                    Cancelar</button>
+            </form>
+        </div>
+
+        <div id="paypal">
+            <h3 style="text-align: center;">CONTA BANCÁRIA - Paypal</h3>
+            <form action="contas_bancarias.html" method="post">
+                <div style="display: flex; margin-bottom: 20px;">
+                    <button type="button" class="btn add_contas" style="width: 100%;"
+                        onclick="open_express_2()">Express</button>
+                    <button type="button" class="btn btn_contas" style="width: 100%; color: #c71585;">Paypal</button>
+                </div>
+                <div class="form-floating">
+                    <input type="text" class="form-control" placeholder="nome@email.com" required autocomplete="bday"
+                        name="nome">
+                    <!---------------INPUT - ALTERAR O NAME ---------------->
+                    <label for="">Nome Completo</label>
+                </div>
+
+                <div class="form-floating">
+                    <input type="text" class="form-control" placeholder="nome@email.com" required autocomplete="tel"
+                        name="nome" maxlength="13" minlength="9">
+                    <!---------------INPUT - ALTERAR O NAME ---------------->
+                    <label for="">Telefone</label>
+                </div>
+
+                <div class="form-floating">
+                    <input type="email" class="form-control" required name="nome" placeholder="nome@email.com"
+                        autocomplete="email">
+                    <!---------------INPUT - ALTERAR O NAME ---------------->
+                    <label for="">E-mail</label>
+                </div>
+
+                <!---------------BOTÃO PARA ENVIAR OD DADOS - INICIO--------------->
+                <button type="submit" class="btn add_contas" style="width: 100%;">Salvar Conta</button>
+                <!---------------BOTÃO PARA ENVIAR OD DADOS - FIM--------------->
+                <button type="button" class="btn add_contas" style="width: 100%; margin-top: 20px; margin-bottom: 30px;"
+                    onclick="fechar_express_e_paypal()">
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="feather feather-x">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                    Cancelar</button>
+            </form>
+        </div>
+    </div>
+    <!---------------FIM DO BACKEND---------------->
+
+</body>
+<div class="modal fade" id="eliminar_conta" tabindex="-1" aria-labelledby="imagemModalLabel2" aria-hidden="false">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content"
+            style="backdrop-filter: blur(30px); box-shadow: 0 0 20px #c71585; background-color: transparent; color: white;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imagemModalLabel2">Wasom Upfy</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"
+                    style="color: white; background-color: #c71585;"></button>
+            </div>
+            <div class="modal-body">
+                <h2 style="text-align: center; margin-bottom: 23px;">Pretendes Eliminar esta conta?</h2>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Não Eliminar Conta</button>
+                    <button type="button" class="btn btn-danger">Sim Eliminar Conta</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="atulizar_conta" tabindex="-1" aria-labelledby="imagemModalLabel2" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content"
+            style="backdrop-filter: blur(30px); box-shadow: 0 0 20px #c71585; background-color: transparent; color: white;">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imagemModalLabel2">Wasom Upfy</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"
+                    style="color: white; background-color: #c71585;"></button>
+            </div>
+            <div class="modal-body">
+                <div id="atualizar_conta_bancaria_form">
+                    <div id="express_atualizar_conta">
+                        <h3 style="text-align: center;"> ATUALIZAR - CONTA BANCÁRIA - Multicaixa Express</h3>
+                        <form action="contas_bancarias.html" method="post">
+                            <div style="display: flex; margin-bottom: 20px;">
+                                <button type="button" class="btn btn_contas"
+                                    style="width: 100%; color: #c71585;">Express</button>
+                                <button type="button" class="btn add_contas" style="width: 100%;"
+                                    onclick="open_paypal_atualizar_conta()">Paypal</button>
+                            </div>
+                            <div class="form-floating">
+                                <input type="text" class="form-control" placeholder="nome@email.com" required
+                                    autocomplete="bday" name="nome">
+                                <!---------------INPUT - ALTERAR O NAME ---------------->
+                                <label for="">Nome Completo</label>
+                            </div>
+
+                            <div class="form-floating">
+                                <input type="text" class="form-control" placeholder="nome@email.com" required
+                                    autocomplete="tel" name="nome" maxlength="13" minlength="9">
+                                <!---------------INPUT - ALTERAR O NAME ---------------->
+                                <label for="">Telefone</label>
+                            </div>
+
+                            <div class="form-floating">
+                                <input type="text" class="form-control" required name="" maxlength="18"
+                                    placeholder="AOxxxxxxxxxxxxxxxx" autocomplete="off">
+                                <!---------------INPUT - ALTERAR O NAME ---------------->
+                                <label for="">IBAN</label>
+                            </div>
+
+                            <!---------------BOTÃO PARA ENVIAR OD DADOS - INICIO--------------->
+                            <button type="submit" class="btn add_contas" style="width: 100%;">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-refresh-ccw" style="margin-right: 10px;">
+                                    <polyline points="1 4 1 10 7 10"></polyline>
+                                    <polyline points="23 20 23 14 17 14"></polyline>
+                                    <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15">
+                                    </path>
+                                </svg>
+                                Atualizar Conta</button>
+                            <!---------------BOTÃO PARA ENVIAR OD DADOS - FIM--------------->
+                            <button type="button" class="btn add_contas"
+                                style="width: 100%; margin-top: 20px; margin-bottom: 30px;"
+                                onclick="fechar_express_e_paypal()" data-bs-dismiss="modal">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-x">
+                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                </svg>
+                                Cancelar</button>
+                        </form>
+                    </div>
+
+                    <div id="paypal_atualizar_conta">
+                        <h3 style="text-align: center;"> ATUALIZAR -CONTA BANCÁRIA - Paypal</h3>
+                        <form action="contas_bancarias.html" method="post">
+                            <div style="display: flex; margin-bottom: 20px;">
+                                <button type="button" class="btn add_contas" style="width: 100%;"
+                                    onclick="open_express_atualizar_conta()">Express</button>
+                                <button type="button" class="btn btn_contas"
+                                    style="width: 100%; color: #c71585;">Paypal</button>
+                            </div>
+                            <div class="form-floating">
+                                <input type="text" class="form-control" placeholder="nome@email.com" required
+                                    autocomplete="bday" name="nome">
+                                <!---------------INPUT - ALTERAR O NAME ---------------->
+                                <label for="">Nome Completo</label>
+                            </div>
+
+                            <div class="form-floating">
+                                <input type="text" class="form-control" placeholder="nome@email.com" required
+                                    autocomplete="tel" name="nome" maxlength="13" minlength="9">
+                                <!---------------INPUT - ALTERAR O NAME ---------------->
+                                <label for="">Telefone</label>
+                            </div>
+
+                            <div class="form-floating">
+                                <input type="email" class="form-control" required name="nome"
+                                    placeholder="nome@email.com" autocomplete="email">
+                                <!---------------INPUT - ALTERAR O NAME ---------------->
+                                <label for="">E-mail</label>
+                            </div>
+
+                            <!---------------BOTÃO PARA ENVIAR OD DADOS - INICIO--------------->
+                            <button type="submit" class="btn add_contas" style="width: 100%;">
+                                
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-refresh-ccw" style="margin-right: 10px;">
+                                    <polyline points="1 4 1 10 7 10"></polyline>
+                                    <polyline points="23 20 23 14 17 14"></polyline>
+                                    <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15">
+                                    </path>
+                                </svg>
+                                Atualizar Conta</button>
+                            <!---------------BOTÃO PARA ENVIAR OD DADOS - FIM--------------->
+                            <button type="button" class="btn add_contas"
+                                style="width: 100%; margin-top: 20px; margin-bottom: 30px;"
+                                onclick="fechar_express_e_paypal()" data-bs-dismiss="modal">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-x">
+                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                </svg>
+                                Cancelar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</html>
