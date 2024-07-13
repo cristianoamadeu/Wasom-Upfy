@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wason Upfy</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/libs/scrollue.css">
+    <link rel="shortcut icon" href="imgs/logo.jpg" type="image/x-icon">
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/javascript.js"></script>
+    <script src="//code.jivosite.com/widget/8vEuK7J8JY" async></script>
+</head>
+
+<body>
+    <header class="fixed-top">
+        <nav class="navbar bg-body-tertiary ">
+            <div class="container-fluid">
+                <div>
+                    <a class="navbar-brand" href="home.html"><img src="imgs/logo.jpg" class="logo" alt="Wason Upfy"></a>
+                </div>
+
+                <div class="container_link1">
+                    <a class="link_navbar" href="#"
+                        style=" color: #c71585; border-bottom: 1px solid #c71585;  padding: 0 5px;">Home</a>
+                    <a class="link_navbar" href="#sobre" onclick="open_sobre()">Sobre</a>
+                    <a class="link_navbar" href="#precos">Planos e Preços</a>
+                    <a class="link_navbar" href="#ferramentas">Ferramentas</a>
+                    <a href="#contacta_nos" class="link_navbar" onclick="contactar()">Fale Conosco</a>
+                    <a class="link_navbar" href="#autenticacao"><label for="" onclick="open_Login()">Login</label></a>
+                    <a class="link_navbar" href="#autenticacao"><label for="nome"
+                            onclick="open_cadastro()">Inscreve-se</label></a>
+
+                </div>
+                <button class="navbar-toggler btn_menu" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-menu" style="color: #c71585;">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel" style="background-color: black; color: #c71585;">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Wason Upfy</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
+                            style="margin-right: 20px; background-color: #c71585;"></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <a class="link_navbar_off" href="#"
+                                style=" color: #c71585; border-bottom: 1px solid #c71585;  padding: 0 5px; text-align: center; "
+                                data-bs-dismiss="offcanvas">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-home">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                </svg>
+                                <br>
+                                Home</a>
+
+                            <a class="link_navbar" href="#sobre" onclick="open_sobre()" data-bs-dismiss="offcanvas"
+                                style="text-align: center; margin-bottom: 15px;">
+
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-file-text">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                    <polyline points="10 9 9 9 8 9"></polyline>
+                                </svg>
+
+                                <br>
+                                Sobre</a>
+                            <a class="link_navbar_off" href="#precos" data-bs-dismiss="offcanvas"
+                                style="text-align: center;">
+
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-package">
+                                    <line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line>
+                                    <path
+                                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                    </path>
+                                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                                </svg>
+                                <br>
+                                Planos e Preços</a>
+                            <a class="link_navbar_off" href="#ferramentas" data-bs-dismiss="offcanvas"
+                                style="text-align: center;">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-tool">
+                                    <path
+                                        d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                                    </path>
+                                </svg>
+                                <br>
+                                Ferramentas</a>
+                            <a href="#contacta_nos" class="link_navbar_off" onclick="contactar()"
+                                data-bs-dismiss="offcanvas" style="text-align: center;" style="text-align: center;">
+
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-message-square">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                                <br>
+                                Fale
+                                Conosco</a>
+                            <a class="link_navbar_off" href="#autenticacao" data-bs-dismiss="offcanvas"
+                                onclick="open_Login()" style="text-align: center;">
+
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-log-in">
+                                    <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                                    <polyline points="10 17 15 12 10 7"></polyline>
+                                    <line x1="15" y1="12" x2="3" y2="12"></line>
+                                </svg>
+                                <br>
+                                Login</a>
+                            <a class="link_navbar" href="#autenticacao" data-bs-dismiss="offcanvas"
+                                style="text-align: center;"><label for="nome" onclick="open_cadastro()">
+
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-user-plus">
+                                        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="8.5" cy="7" r="4"></circle>
+                                        <line x1="20" y1="8" x2="20" y2="14"></line>
+                                        <line x1="23" y1="11" x2="17" y2="11"></line>
+                                    </svg>
+                                    <br>
+                                    Inscreve-se</label></a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main" id="none_1">
+        <div class="container_conteudo">
+            <div class="conteudo">
+                <h4>Wasom Upfy, o melhor caminho para a distribuição digital de suas músicas </h4>
+                <h5>Com lançamento de músicas
+                    ilimitadas por apenas 5.000 Kz por ano</h5>
+                <h6>Faça pagamento dos seus planos com a moeda mais usada em seu país, bem como
+                    métodos serviços de pagamentos, <br> tens todas as suas músicas no Spotify, Apple Music, Amazon
+                    Music e
+                    outras 157 plataformas.</h6>
+                <div>
+                    <a href="#autenticacao" onclick="open_cadastro()">
+                        <button type="button" class="btn btn-danger"
+                            style="background-color: #c71585; width: 250px; margin-top: 20px;">Junta-se a
+                            nós</button></a>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section id="sobre">
+        <div class="container">
+            <h1>Distribua sua música para o mundo</h1>
+
+            <p>Alcance novos fãs e ganhe dinheiro com sua música.
+                A Wasom Upfy é a plataforma de distribuição
+                de música mais fácil e completa do mercado.
+                Distribua sua música para todas as principais
+                plataformas de streaming, como Spotify, Apple Music,
+                Deezer, Amazon Music e muito mais.</p>
+
+
+            <p>Com A Wasom Upfy, você pode:
+                <br>
+                1- Manter 100% dos seus royalties.
+                <br>
+                2- Receber pagamentos rápidos e transparentes.
+                <br>
+                3- Obter relatórios detalhados sobre o desempenho da sua música.
+                <br>
+                4- Acessar ferramentas de marketing para promover sua música. E muito mais!
+            </p>
+
+            <p>Comece a distribuir sua música hoje mesmo!
+                Crie uma conta gratuita e comece a distribuir sua música em minutos.
+                Não há necessidade de assinatura ou contrato.</p>
+
+            <p>
+            <h2>Por que escolher o A Wasom Upfy?</h2>
+
+            1- Fácil de usar: Nossa plataforma é intuitiva e fácil de usar, mesmo para iniciantes.
+            <br>
+            2- Completo: Oferecemos tudo o que você precisa para distribuir sua música com sucesso.
+            <br>
+            3-Confiável: Somos uma empresa líder em distribuição de música com anos de experiência.
+            <br>
+            4- Acessível: Oferecemos planos de preços flexíveis para atender às suas necessidades.
+            </p>
+
+            <h4>A Wasom Upfy foi desenvolvida pela:
+                <a href="https://www.linkedin.com/company/voosoft/" target="_blank" class="link_criador"
+                    rel="noopener noreferrer">VooSoft</a>
+            </h4>
+        </div>
+    </section>
+
+    <!---------------INICIO DO BACKEND---------------->
+    <section id="autenticacao">
+        <div class="container_forms container">
+            <!---------------INICIO DO CADASTRO---------------->
+            <form action="home.html" method="get">
+                <div id="cadastro">
+                    <div style="display: flex; flex-direction: column; text-align: center; margin-bottom: 20px;">
+                        <h4>Adere a Wason Upfy</h4>
+                        <h6>Insere os dados solicitados para a conta</h6>
+                    </div>
+
+                    <div class="input_gruop2">
+                        <div class="form-floating" style="width: 100%; color: white;">
+                            <input type="text" class="form-control" id="nome_cadastro" placeholder="nome@email.com"
+                                required autocomplete="name" name="nome" oninput="mostrarPreview()">
+                            <label for="">Nome Completo</label>
+                        </div>
+
+                        <div class="form-floating" style="width: 100%; color: white;">
+                            <input type="email" class="form-control" id="email_cadastro_1" placeholder="nome@email.com"
+                                required autocomplete="email" name="" oninput="mostrarPreview2()">
+                            <label for="">Endereço de e-mail</label>
+                        </div>
+                    </div>
+                    <div class="input_gruop2">
+                        <div class="form-floating" style="width: 100%; color: white;">
+                            <input type="text" class="form-control" id="pais_cadastro" placeholder="nome@email.com"
+                                required autocomplete="country-name" name="" oninput="mostrarPreview3()">
+                            <label for="">País</label>
+                        </div>
+
+                        <div class="form-floating" style="width: 100%; color: white;">
+                            <input type="text" class="form-control" id="cidade_cadastro" placeholder="nome@email.com"
+                                required name="" oninput="mostrarPreview4()">
+                            <label for="">Cidade</label>
+                        </div>
+                    </div>
+
+                    <div class="form-floating" style="width: 100%; color: white;">
+                        <input type="text" class="form-control" id="telefone_cadastro" placeholder="nome@email.com"
+                            required autocomplete="tel" name="" oninput="mostrarPreview5()">
+                        <label for="">Telefone</label>
+                    </div>
+
+                    <div class="form-floating" style=" color: white;">
+                        <input type="text" class="form-control" id="spotify_cadastro" placeholder="nome@email.com"
+                            name="" oninput="mostrarPreview6()">
+                        <label for="">Link do Spotify (Campo Opcional)</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-danger" style="background-color: #c71585; width: 100%;"
+                        onclick="open_comfirmar_cadastro_1()">Continar</button>
+                    <button type="button" class="btn" style="color: #c71585; margin-top: 10px;"
+                        onclick="open_Login()">Acede
+                        a Wasom Upfy</button>
+                </div>
+
+
+                <div action="home.html" method="get" id="comfirmar_cadastro_3">
+                    <div style="display: flex; flex-direction: column; text-align: center; margin-bottom: 20px;">
+                        <h4>Adere a Wason Upfy (Senha)</h4>
+                        <h6>Insere a sua Senha</h6>
+                    </div>
+
+                    <div class="form-floating" style="width: 100%; color: white;">
+                        <input type="text" class="form-control" id="senha_cadastro" placeholder="******" required
+                            maxlength="15" minlength="10" autocomplete="new-password" name="senha_cadastr">
+                        <label for="">Senha</label>
+                    </div>
+
+                    <div class="form-floating" style="width: 100%; color: white;">
+                        <input type="text" class="form-control" id="comfirmar_senha_cadastro" placeholder="******"
+                            required maxlength="15" minlength="10" autocomplete="new-password" name="comfirmar_senha">
+                        <label for="">Confirmar Senha</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-danger"
+                        style="background-color: #c71585; width: 100%; margin-bottom: 20px;"
+                        onclick="open_ver_dados_cadastro()">Avançar</button>
+                    <button type="button" class="btn btn-danger"
+                        style="background-color: #c71585; width: 100%; margin-bottom: 20px;"
+                        onclick="voltar_para_cadastro_comfirmar_cadastro_3()">Voltar</button>
+                </div>
+                <div id="comfirmar_cadastro_4_ver_dados">
+                    <div>
+                        <h4 style="text-align: center;">Dados da Sua Conta</h4>
+                        <div class="form-floating" style="width: 100%; color: white;">
+                            <span>Nome Completo</span>
+                            <div class="form-control input" id="ver_dado"></div>
+                        </div>
+
+                        <div class="form-floating" style="width: 100%; color: white;">
+                            <span>Endereço de E-mail</span>
+                            <div class="form-control input" id="ver_dado2"></div>
+                        </div>
+
+                        <div class="form-floating" style="width: 100%; color: white;">
+                            <span>País</span>
+                            <div class="form-control input" id="ver_dado3"></div>
+                        </div>
+
+                        <div class="form-floating" style="width: 100%; color: white;">
+                            <span>Cidade</span>
+                            <div class="form-control input" id="ver_dado4"></div>
+                        </div>
+
+                        <div class="form-floating" style="width: 100%; color: white;">
+                            <span>Telefone</span>
+                            <div class="form-control input" id="ver_dado5"></div>
+                        </div>
+                        <div class="form-floating" style="width: 100%; color: white;">
+                            <span>Link do Spotify (Campo Opcional)</span>
+                            <div class="form-control input" id="ver_dado6"></div>
+                        </div>
+
+                        <button type="button" class="btn" style="background-color: #c71585; color: white; width: 100%;"
+                            onclick="open_cadastro_pre_ver_dados()">Editar dados</button>
+
+                        <hr>
+                        <button type="submit" class="btn"
+                            style="background-color: #c71585; color: white; width: 100%;">Criar Conta</button>
+                    </div>
+                </div>
+            </form>
+            <!---------------FIM DO CADASTRO---------------->
+
+
+            <!---------------INCIO VERIFICAÇÃO DOS DADOS DO CADASTRO, SEM AINDA ESTAR CADASTRADO--------------->
+
+            <form id="comfirmar_cadastro_1">
+                <div style="display: flex; flex-direction: column; text-align: center; margin-bottom: 20px;">
+                    <h4>Adere a Wason Upfy (Verificação de E-mail)</h4>
+                    <h6>Insere o seu E-mail</h6>
+                </div>
+
+                <div class="form-floating" style="width: 100%; color: white;">
+                    <input type="email" class="form-control" id="email_cadastro_2" placeholder="nome@email.com" required
+                        autocomplete="email" name="">
+                    <label for="">Endereço de e-mail</label>
+                </div>
+
+                <button type="submit" class="btn btn-danger"
+                    style="background-color: #c71585; width: 100%; margin-bottom: 20px;"
+                    onclick="open_comfirmar_cadastro_2()">Continar</button>
+                <button type="button" class="btn btn-danger"
+                    style="background-color: #c71585; width: 100%; margin-bottom: 20px;"
+                    onclick="voltar_para_cadastro_comfirmar_cadastro_1()">Voltar</button>
+            </form>
+
+            <form id="comfirmar_cadastro_2">
+                <div style="display: flex; flex-direction: column; text-align: center; margin-bottom: 20px;">
+                    <h4>Adere a Wason Upfy (Codigo de Verificação)</h4>
+                    <h6>Insere o codigo de verificaçao que enviamos no seu E-mail</h6>
+                </div>
+
+                <div class="form-floating" style="width: 100%; color: white;">
+                    <input type="email" class="form-control" id="codigo_verificacao" placeholder="nome@email.com"
+                        required autocomplete="email" name="" maxlength="6">
+                    <label for="">Codigo de Verificação</label>
+                </div>
+
+                <button type="submit" class="btn btn-danger"
+                    style="background-color: #c71585; width: 100%; margin-bottom: 20px;"
+                    onclick="open_comfirmar_cadastro_3()">Continar</button>
+                <button type="button" class="btn btn-danger"
+                    style="background-color: #c71585; width: 100%; margin-bottom: 20px;"
+                    onclick="voltar_para_cadastro_comfirmar_cadastro_2()">Voltar</button>
+            </form>
+            <!---------------FIM VERIFICAÇÃO- DOS DADOS DO CADASTRO--------------->
+
+            <!---------------INICIO DO LOGIN---------------->
+            <form action="home.html" method="get" id="login">
+                <div style="display: flex; flex-direction: column; text-align: center; margin-bottom: 20px;">
+                    <h4>Entre na Wason Upfy</h4>
+                </div>
+
+                <div class="form-floating" style="width: 100%; color: white;">
+                    <input type="email" class="form-control" id="email_login" placeholder="nome@email.com" required
+                        autocomplete="email" name="email_login">
+                    <label for="">Endereço de e-mail</label>
+                </div>
+
+                <div class="form-floating" style="width: 100%; color: white;">
+                    <input type="password" class="form-control" id="senha_login" placeholder="******" required
+                        maxlength="15" minlength="10" autocomplete="current-password" name="senha_login">
+                    <label for="">Senha</label>
+                </div>
+
+
+                <button type="submit" class="btn btn-danger"
+                    style="background-color: #c71585; width: 100%; margin-bottom: 20px;" onclick="logar()">
+                    Iniciar sessão
+                </button>
+                <div class="btn_autenticacao">
+                    <button type="button" class="btn" style="color: #c71585;" onclick="open_cadastro()">Ja tens uma
+                        conta?</button>
+                    <button type="button" class="btn" style="color: #c71585; margin-bottom: 20px;"
+                        onclick="open_recuperar_senha_1()">Esqueceste a palavra-passe?</button>
+                </div>
+            </form>
+            <!---------------FIM DO LOGIN---------------->
+
+
+            <!---------------INICIO DA SESSÃO RECUPERAR SENHA---------------->
+
+            <form action="home.html" method="post" id="recuperar_senha_1">
+                <div style="display: flex; flex-direction: column; text-align: center; margin-bottom: 20px;">
+                    <h4>Encontre a conta</h4>
+                    <h6>Insere o seu endereço de e-mail</h6>
+                </div>
+
+                <div class="form-floating" style="width: 100%; color: white;">
+                    <input type="email" class="form-control" id="e_mail_verification" placeholder="nome@email.com"
+                        required autocomplete="email" name="" style="color: white;">
+                    <label for="">Endereço de e-mail</label>
+                </div>
+
+                <button type="submit" class="btn btn-danger"
+                    style="background-color: #c71585; width: 100%; margin-bottom: 20px;"
+                    onclick="open_recuperar_senha_2()">Continar</button>
+                <button type="button" class="btn btn-danger"
+                    style="background-color: #c71585; width: 100%; margin-bottom: 20px;"
+                    onclick="cancelar_recuperar_senha_1()">Cancelar</button>
+            </form>
+
+            <form action="home.html" method="post" id="recuperar_senha_2">
+                <div id="recuperar_senha_2_1">
+                    <div style="display: flex; flex-direction: column; text-align: center; margin-bottom: 20px;">
+                        <h4>Recuperar Senha</h4>
+                        <h6>Insere a sua Nova Senha</h6>
+                    </div>
+
+                    <div class="form-floating" style="width: 100%; color: white;">
+                        <input type="text" class="form-control" id="senha_recuperar_verification" placeholder="******"
+                            required maxlength="18" minlength="15" autocomplete="new-password" name=""
+                            style=" color: white;">
+                        <label for="">Nova Senha</label>
+                    </div>
+
+                    <div class="form-floating" style="width: 100%; color: white;">
+                        <input type="text" class="form-control" id="comfirmar_senha_verification" placeholder="******"
+                            required maxlength="18" minlength="15" autocomplete="new-password" name=""
+                            style=" color: white;">
+                        <label for="">Confirmar Nova Senha</label>
+                    </div>
+
+                    <button type="button" class="btn btn-danger"
+                        style="background-color: #c71585; width: 100%; margin-bottom: 20px;"
+                        onclick="senha_verification()">Avançar</button>
+                    <button type="button" class="btn btn-danger"
+                        style="background-color: #c71585; width: 100%; margin-bottom: 20px;"
+                        onclick="voltar_recuperar_senha_2()">Voltar</button>
+                </div>
+                <div id="recuperar_senha_2_2" style="text-align: center;">
+                    <h4>Senha Altera com sucesso</h4>
+                    <p>Agora já podes fazer o login no site</p>
+
+                    <div style="display: flex; justify-content: center;">
+                        <button type="submit" class="btn btn-primary">Iniciar Sessão</button>
+                    </div>
+                </div>
+
+            </form>
+            <!---------------FIM DA SESSÃO RECUPERAR SENHA---------------->
+        </div>
+    </section>
+    <!---------------INICIO DO BACKEND---------------->
+
+    <section class="section" id="none_2">
+        <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+
+            <div class="container container_all_plan" id="precos" style="margin-top: 30px;">
+                <div class="container_planos">
+                    <div class="text_planos" style="text-align: center;">
+                        <h4>Nós Temos planos suficientes para a sua carreira</h4>
+                        <h6>Com apenas 2 tipos de planos temos o que é necessário e suficiente para artistas
+                            independentes e
+                            Editoras com preços justos</h6>
+
+                        <div class="img_planos">
+                            <img class="img-fluid" src="imgs/Plano1.png" alt="">
+                            <img class="img-fluid" src="imgs/Plano2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <a href="priv_terms/planos.html" class="link_plan">
+                <button type="button" class="btn btn-danger"
+                    style="width: 100%; background-color: #c71585; margin-top: 20px;">Ver
+                    Planos</button></a>
+            <hr style="width: 100%;">
+
+            <div class="container container_all_plan" id="ferramentas">
+                <div class="container_planos">
+                    <div class="text_planos">
+                        <h4>Tempo de aprovação rápido</h4>
+                        <h6>Nossas ferramentas de aprovação baseada em processos avançados e inovados, tornam rápida a
+                            entrega da sua música para as plataformas. Seus lançamentos seram aprovados e entregues em
+                            48 á 72 horas.</h6>
+                    </div>
+                </div>
+                <img src="imgs/Tempo de Aprovação.png" class="img_plan img-fluid" alt="">
+            </div>
+            <hr style="width: 100%;">
+            <div class="container container_all_plan">
+                <div class="container_planos">
+                    <div class="text_planos">
+                        <h4>Acesso a ferramentas de análises inovadoras</h4>
+                        <h6>Explore os dados estatísticos e receitas semanais e mensais para que você possa analisar o
+                            desempenho das suas músicas. Com as nossas estratégias de marketing terás mais rendimentos.
+                        </h6>
+                    </div>
+                </div>
+                <img src="imgs/Acesso e ferramentas.png" class="img_plan img-fluid" alt="">
+
+            </div>
+
+            <a href="#autenticacao" onclick="open_cadastro()" class="link_plan">
+                <button type="button" class="btn"
+                    style="background-color: #c71585; width: 100%; color: white; margin-top: 20px;">Iniciar</button></a>
+            <hr style="width: 100%;">
+            <div class="container" style="color: white;">
+                <div class="h_plan">
+                    <h3>Ganha mais com suas músicas hoje</h3>
+                    <h5>Cada vez que seus fãs e ouvintes executarem suas músicas você ganha uma receita que vai direito
+                        para
+                        a sua conta <br> Wasom Upfy</h5>
+                </div>
+
+
+                <div class="container_all_ganha">
+                    <div style="text-align: center;">
+                        <img src="imgs/Divisão de seus royalties.png" alt="" class="img-fluid">
+
+                        <div>
+                            <h5>Divisão de seus royalties</h5>
+                            <p>Convide seus colaboradores com contas Wasom Upfy para receber cotas de royalties de
+                                lançamentos específicos ou de toda sua conta</p>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <img src="imgs/Atualiza ou retire seus lançamentos.png" alt="" class="img-fluid">
+
+                        <div>
+                            <h5>Atualize ou retire seus lançamentos das plataformas</h5>
+                            <p>Faça a edição e atualize seus lançamentos, incluindo capas e áudios, directamente da sua
+                                conta Wasom Upfy</p>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <img src="imgs/Promove sua música.png" alt="" class="img-fluid">
+
+                        <div>
+                            <h5>Promove sua música</h5>
+                            <p>Oferecemos pre-salves, smartlinks e uma ferramenta de marketing com plano de lançamento
+                                desde datas, horas e plataformas a distribui. Clica no Botão para se Inscrever</p>
+                        </div>
+                    </div>
+
+                </div>
+                <a href="#autenticacao" onclick="open_cadastro()" style="width: 100%;">
+                    <button type="button" class="btn btn-danger"
+                        style="margin-bottom: 50px; background-color: #c71585; width: 100%;">Inscreve-se
+                        Agora</button></a>
+
+            </div>
+        </div>
+    </section>
+    <section id="contacta_nos" id="none_3">
+
+        <div class="container_forms ">
+            <h3 style="margin-bottom: 30px;">Fale Conosco</h3>
+
+            <form action="home.html" method="get" class="contactar">
+                <div class="input_gruop2">
+                    <div class="form-floating" style="width: 100%; color: white;">
+                        <input type="text" class="form-control" id="nome_contactar" placeholder="nome@email.com"
+                            required autocomplete="name" name="nome">
+                        <label for="">Nome Completo</label>
+                    </div>
+
+                    <div class="form-floating" style="width: 100%; color: white;">
+                        <input type="email" class="form-control" id="email_cantactar" placeholder="nome@email.com"
+                            required autocomplete="email" name="">
+                        <label for="">Endereço de e-mail</label>
+                    </div>
+                </div>
+
+                <div class="form-floating" style="width: 100%; color: white;">
+                    <textarea name="" id="" rows="10" style="width: 100%; padding: 20px;" required
+                        placeholder="Digite a sua questão ou dúvida..."></textarea>
+                </div>
+
+                <button type="submit" class="btn" style="background-color: #c71585; color: white; width: 100%;">Enviar
+                    mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer_links">
+
+            <a href="https://facebook.com/wasom.official_" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path
+                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                </svg></a>
+
+            <a href="https://instagram.com/wasomupfy_" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-instagram" viewBox="0 0 16 16">
+                    <path
+                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                </svg></a>
+
+            <a href="https://youtube.com/@WasomUpfy_" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-youtube"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+                </svg></a>
+
+            <a href="https://www.linkedin.com/company/wasom-upfy/" target="_blank">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-linkedin">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+                </a>
+        </div>
+        <hr>
+        <div class="container footer_meio">
+            <div>
+                <h4 style="color: #c71585;">Serviços</h4>
+                <div class="links_footer">
+                    <a href="#ferramentas">Ferramentas</a>
+                    <a href="#precos">Planos e Preços</a>
+                </div>
+            </div>
+
+            <div>
+                <h4 style="color: #c71585;">Sobre</h4>
+                <div class="links_footer">
+                    <a href="#sobre" onclick="open_sobre()">Sobre nós</a>
+                    <a href="#autenticacao" onclick="open_cadastro()">Painel de Controlo</a>
+                </div>
+            </div>
+
+            <div>
+                <h4 style="color: #c71585;">Central de Apoio</h4>
+                <div class="links_footer">
+                    <a href="#contacta_nos" onclick="contactar()">Fale Conosco</a>
+                    <a href="mailto:suporte.wasomupfy@outlook.pt">suporte.wasomupfy@outlook.pt</a>
+                    <p>Atendimento Chat Online: <br>
+                        Segunda - Sexta: 09h às 18h</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="fim_footer container">
+            <div class="links_footer">
+                <p>&copy; Copyright 2024 Wasom Upfy</p>
+            </div>
+
+            <div class="links_footer">
+                <a href="priv_terms/terms.html" target="_blank">Termos de Uso</a>
+                <a href="priv_terms/priv.html" target="_blank">Política de Privacidade</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script>
+    function mostrarPreview() {
+        const textoInput = document.getElementById('nome_cadastro');
+        const previewArea = document.getElementById('ver_dado');
+        previewArea.textContent = textoInput.value;
+    }
+
+    function mostrarPreview2() {
+        const textoInput2 = document.getElementById('email_cadastro_1');
+        const previewArea2 = document.getElementById('ver_dado2');
+
+        previewArea2.textContent = textoInput2.value;
+    }
+
+    function mostrarPreview3() {
+        const textoInput3 = document.getElementById('pais_cadastro');
+        const previewArea3 = document.getElementById('ver_dado3');
+
+        previewArea3.textContent = textoInput3.value;
+    }
+
+    function mostrarPreview4() {
+        const textoInput4 = document.getElementById('cidade_cadastro');
+        const previewArea4 = document.getElementById('ver_dado4');
+
+        previewArea4.textContent = textoInput4.value;
+    }
+
+    function mostrarPreview5() {
+        const textoInput5 = document.getElementById('telefone_cadastro');
+        const previewArea5 = document.getElementById('ver_dado5');
+
+        previewArea5.textContent = textoInput5.value;
+    }
+
+    function mostrarPreview6() {
+        const textoInput6 = document.getElementById('spotify_cadastro');
+        const previewArea6 = document.getElementById('ver_dado6');
+
+        previewArea6.textContent = textoInput6.value;
+    }
+</script>
+
+</html>
